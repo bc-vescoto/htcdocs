@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Ooyala Code Challenge</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- This embed code automatically includes and packages standard Player V4 plugins. If you need a different mix of plugins, please use the Advanced embed option. To see the included plugins, please refer to this doc: http://help.ooyala.com/video-platform/concepts/pbv4_release_notes.html -->
+    <script src="http://player.ooyala.com/core/8cc5af7b3d1433986a6041e6f7f98ff"></script>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <div class="navbar navbar_out">
+      <nav class="nav_mobile"></nav>
+      <div class="container">
+        <div class="navbar__in">
+          <div class="navbar__logodiv">
+            <a href="index.html" class="navbar__logo" style="max-height: 100%">
+    					<img src="images/ooyalalogo136.jpeg" alt="Ooyala logo" class="ooyalalogo">
+    				</a>
+          </div>
+          <div class="navbar__mid"></div>
+          <div class="navbar__menudiv">
+            <nav class="navbar__menu">
+              <ul>
+                <li><a href="index.html">Page 1</a></li>
+                <li><a href="page2.html">Page 2</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PAGE ONE -->
+    <div class="pageone">
+      <div class="backgradient"></div>
+      <div class="backimg"></div>
+      <div class="pageone_int">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="pageone_video">
+                <div id='container_1524242594'>
+                </div>
+                <!-- Ooyala player script -->
+                <script>
+
+                  function onCreate(player) {
+
+                   // User's clicks on a Player UI element
+                    player.mb.subscribe("*" , 'example', function(eventName)  {
+                        if (eventName == OO.EVENTS.PLAYED) {
+                          x.style.display = "block";
+                        }
+
+                     });
+                   }
+                  var playerParam = {
+                    "pcode": "JieGwyOuGE7Wr6OIXITt8UFHcTpF",
+                    'autoplay':true,
+                    'loop':false,
+                    'muteFirstPlay':true,
+                    "skin": {
+                      "config": "http://player.ooyala.com/static/v4/production/skin.json",
+                      "inline": {
+                      // Put your player customizations here
+                      // to override settings in skin.json.
+                      // The JSON object must match the structure of skin.json.
+                      "startScreen":{"showPlayButton":{"default":false},"showTitle":{"default":false},"showDescription":{"default":false},"showPauseIcon": {"default":false}},
+                      "pauseScreen":{"showPlayButton":{"default":false},"showTitle":{"default":false},"showDescription":{"default":false},"showPauseIcon": {"default":false}},
+                      "controlBar":{"height":0},
+                  }
+                  },
+                  onCreate : window.onCreate,
+                  };
+
+                  OO.ready(function() {
+                    videoPlayer = window.pp = OO.Player.create('container_1524242594', '53cmozZjE6YfeoBf7ysqm50B5h0uC49Z', playerParam);
+                  });
+
+                </script>
+              </div>
+            </div>
+          </div>
+          <div class="row controls">
+              <div class="col-sm-4">
+                <button type="button" onclick="play();" class="btn btn-grad .btn-lg">P L A Y</button>
+              </div>
+              <div class="col-sm-4">
+                <button type="button" onclick="pause();" class="btn btn-grad .btn-lg">P A U S E</button>
+              </div>
+              <div class="col-sm-4">
+                <input type="range" min="0" max="100" value="0" class="range blue" id="volch" onchange="volume()"/>
+              </div>
+            </div>
+            <div class="row" id="alert">
+              <div class="col-sm-12" id="alertID">
+                <h4 id="alertID">Page1</h4>
+                <p id="alertID">Autoplay <br> Chromeless <br> Add external buttons [PAUSE, PLAY, VOLUME] <br> Do something once the video finish</p>
+                <h4 id="alertID">Page2</h4>
+                <p id="alertID">Add thumbnail second video and start playing it on the existing player after clicking on it <br>
+                Modify 3 Player UI components [Color, Position side bar, buttons] <br>
+                Display Bit rate, Buffer and the number of clicks on the Player UI <br>
+                Allow the user to change the title</p>
+                <h4 id="alertID">Both Pages</h4>
+                <p id="alertID">Use at least 5 functions from the Player API [PLAY, PAUSE, VOLUME, BITRATE, BUFFER, CURRENT BITRATE, GET TITLE]</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 contact">
+            <h4>Ooyala Code Challenge</h4>
+            <p>Victor Manuel Escoto Ruano</p>
+            <p>Tel. 3314357838</p>
+            <p>Email. victorer92@gmail.com</p>
+          </div>
+          <div class="col-sm-4 copyr">
+            <p>Site used only as a Code Challenge</p>
+            <p>© 2018 Ooyala, Inc. • Website Privacy Policy • Terms of Service • All Rights Reserved</p>
+          </div>
+          <div class="col-sm-4 link">
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- PLAY PAUSE AND VOLUME SCRIPTS -->
+    <script type="text/javascript">
+    var x = document.getElementById("alertID");
+    x.style.display = 'none';
+      function play(){
+        videoPlayer.play();
+      }
+
+      function pause() {
+        videoPlayer.pause();
+      }
+
+      function volume() {
+        let volval;
+
+        volval = document.getElementById('volch').value / 100;
+        console.log("Test");
+        console.log(volval);
+        console.log(document.getElementById('volch').value);
+        videoPlayer.unmute();
+        videoPlayer.setVolume(volval);
+      }
+
+    </script>
+  </body>
+</html>

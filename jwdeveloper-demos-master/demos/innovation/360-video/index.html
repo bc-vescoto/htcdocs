@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>360° Video & VR</title>
+  <meta name="description" content="This demo showcases the 360 Video &#x2F; VR feature in JW Player for HTML5. JW Player can play spherical 360 videos in magic window mode and immersive VR mode, even in a playlist of mixed media." />
+    <meta name="google-site-verification" content="ke-K2lvR7rSTzOGVR7pIDw0dUKhTzsCScFN753TjgXs" />
+    <meta property="og:title" content="360° Video & VR">
+    <meta property="og:description" content="This demo showcases the 360 Video &#x2F; VR feature in JW Player for HTML5. JW Player can play spherical 360 videos in magic window mode and immersive VR mode, even in a playlist of mixed media.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="//developer.jwplayer.com/img/demos-fb-share.png">
+    <meta property="og:url" content="//developer.jwplayer.com/jw-player/demos/">
+    <meta property="og:site_name" content="JW Player Demos &amp; Code Examples">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jwplayer">
+    <meta name="twitter:creator" content="@jwplayer">
+    <meta name="twitter:title" content="360° Video & VR">
+    <meta name="twitter:description" content="This demo showcases the 360 Video &#x2F; VR feature in JW Player for HTML5. JW Player can play spherical 360 videos in magic window mode and immersive VR mode, even in a playlist of mixed media.">
+    <meta name="twitter:image" content="//developer.jwplayer.com/img/demos-twitter-share.png">
+    <meta itemprop="name" content="360° Video & VR">
+    <meta itemprop="description" content="This demo showcases the 360 Video &#x2F; VR feature in JW Player for HTML5. JW Player can play spherical 360 videos in magic window mode and immersive VR mode, even in a playlist of mixed media.">
+    <meta itemprop="image" content="//developer.jwplayer.com/img/demos-twitter-share.png">
+
+
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+	<link rel="stylesheet" href="/css/developer.min.css">
+    <link rel="stylesheet" href="css/build.css">
+    <link rel="canonical" href="//developer.jwplayer.com" />
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="/js/developer.min.js"></script>
+</head>
+  <body>
+    <div class="site">
+      <div class="site-body">
+        <div class="page">
+          <div class="page-body">
+
+<div class="demos">
+
+  <div class="demo-single">
+
+   
+
+
+    <div class="demo-container">
+
+      <div class="demo-layout-vertical">
+        <div class="demo-layout-content">
+          <!--
+* Copyright 2016 Longtail Ad Solutions Inc.
+*
+* Licensed under the Apache License, Version 2.0 (the "License");
+* you may not use this file except in compliance with the License.
+* You may obtain a copy of the License at
+*
+* http://www.apache.org/licenses/LICENSE-2.0
+*
+* Unless required by applicable law or agreed to in writing, software
+* distributed under the License is distributed on an "AS IS" BASIS,
+* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+* express or implied. See the License for the specific language
+* governing permissions and limitations under the License.
+-->
+<script src="//content.jwplatform.com/libraries/lqsWlr4Z.js"></script>
+<div id="vr-player"></div>
+<div id="error"></div>
+<div id="instructions">
+	<div id="steps">
+		<pre><code class="html">var player = jwplayer('container').setup({
+	playlist: [{
+		title: 'Caminandes VR',
+		mediaid: 'AgqYcfAT',
+		stereomode: 'monoscopic',
+		file: '//vr.jwplayer.com/content/AgqYcfAT/AgqYcfAT-8yQ1cYbs.mp4'
+	}]
+});</code></pre>
+	</div>
+
+</div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+<script type="text/javascript">
+
+var testVideo = "http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8"
+var sources = [{
+	"file": testVideo,
+	"height": 1080,
+	"label": "1080p",
+	"type": "video/mp4",
+	"width": 1920,
+	"default": "true"
+}];
+
+var player = jwplayer('vr-player').setup({
+	primary: 'html5',
+	hlshtml: true,
+	width: '100%',
+	aspectratio: '16:9',
+	playlist: [{
+		stereomode: 'monoscopic',
+		sources: sources,
+		tracks: [{
+			//file: '//content.jwplatform.com/strips/AgqYcfAT-120.vtt',
+			//kind: 'thumbnails'
+		}]
+	}]
+});
+
+var errorDiv = document.querySelector("#error");
+
+if (player.getEnvironment().OS.iOS) {
+	// iOS doesn't support CORS.
+	// See: https://bugs.webkit.org/show_bug.cgi?id=135379
+	sources = [{
+		file: window.location.origin + '/static/AgqYcfAT-8yQ1cYbs.mp4',
+		type: 'video/mp4'
+	}];
+}
+
+player.on('error', function(error) {
+	if (error.message == '360° video playback is not supported in this browser.') {
+		errorDiv.textContent = error.message +
+			' Please upgrade to a browser with <a href="https://get.webgl.org/">WebGL support</a>.';
+		handleError(error);
+	}
+});
+
+player.on('ready', function() {
+	var vrPlugin = player.getPlugin('vr');
+	if (vrPlugin) {
+		vrPlugin.on('error', function(error) {
+			errorDiv.textContent = error.message;
+			handleError(error);
+		});
+	}
+});
+
+function handleError(error) {
+	console.error('Error: ' + error.message);
+	errorDiv.classList.add('active');
+}
+
+// Insert player version
+if (jwplayer().id) {
+	jwplayer().on('ready', function() {
+		document.getElementById('player-version').innerHTML = jwplayer.version.split('+')[0];
+	});
+}
+
+</script>
+<script type="text/javascript">
+  function setVersion() {
+    if (typeof jwplayer === 'undefined') {
+      setTimeout(setVersion, 100);
+      return;
+    }
+
+    if (jwplayer && jwplayer().id) {
+      jwplayer().on('ready', function() {
+        document.getElementById('demo-player-version').innerHTML = jwplayer.version.split('+')[0];
+      });
+    }
+  }
+
+  setVersion();
+</script>
+  </body>
+</html>

@@ -1,0 +1,643 @@
+<html><head><style type="text/css"></style>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VR &amp; 360° - Bitmovin Demos</title>
+  <link rel="shortcut icon" href="https://cdn.bitmovin.com/frontend/shared/images/favicon/favicon.ico">
+  <link rel="icon" type="image/png" href="https://cdn.bitmovin.com/frontend/shared/images/favicon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="https://cdn.bitmovin.com/frontend/shared/images/favicon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://cdn.bitmovin.com/frontend/shared/images/favicon/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://cdn.bitmovin.com/frontend/shared/images/favicon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="https://cdn.bitmovin.com/frontend/shared/images/favicon/favicon-128x128.png" sizes="128x128">
+
+  <meta property="og:site_name" content="Bitmovin Demos">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://bitmovin.com/demos/assets/demos/player/vr-360/icon-05694ce27fd31d89c68fc0450bbe417ded67c907eece32da9d45189d6d13f170.png">
+    <meta property="og:image:width" content="128">
+    <meta property="og:image:height" content="128">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:title" content="VR &amp; 360° - Bitmovin Demos">
+    <meta property="og:url" content="https://bitmovin.com/demos/vr-360">
+    <meta property="og:description" content="The Bitmovin Player was the first player on the market to achieve complete cross browser compatibility, and is still leading the way in features and performance.">
+    <meta name="description" content="The Bitmovin Player was the first player on the market to achieve complete cross browser compatibility, and is still leading the way in features and performance.">
+
+  <script src="//js.hs-analytics.net/analytics/1532382300000/3411032.js" type="text/javascript" id="hs-analytics"></script><script type="text/javascript" async="" src="https://cdn.amplitude.com/libs/amplitude-4.2.1-min.gz.js"></script><script async="" src="//www.google-analytics.com/analytics.js"></script><script>
+    window.isAdblockEnabled = true;
+  </script>
+  <script src="/demos/adframe.js?v1.2.2"></script>
+
+  <script>
+    window.BITVERSION = {
+      framework: 'v1.2.2',
+      demos: 'v0.2.0'
+    };
+  </script>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i.GoogleAnalyticsObject = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga')
+    ga('create', 'UA-25713398-2', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+  <!-- Start of HubSpot Embed Code -->
+  <script type="text/javascript" id="hs-script-loader" async="" defer="" src="https://js.hs-scripts.com/3411032.js"></script>
+  <!-- End of HubSpot Embed Code -->
+
+  <script>
+    window._rails_env = 'production';
+  </script>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="S6ueC3rcaz4w5w7UoJ5Y5MjUmZxaQg1IAnQgTIhijqCaQOtLFnl1m1OLRFVlvNSnXkhzcuQJAbtACwqYj1L6jw==">
+  <link rel="stylesheet" media="all" href="/demos/assets/application-812b698a7c4c30b7628b8cb12203c0d0c254692b41ce7c0665d8426f2ca69692.css">
+  <script src="/demos/assets/application-4bb4058dfa784779953021d2a2c3c40c0123c6bb26a660c9bb7e4e6a463bca83.js"></script><style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style>
+<style type="text/css">.bitmovinplayer-poster{position:absolute;top:0;bottom:0;left:0;right:0;display:none;background-size:contain;background-position:50%;background-repeat:no-repeat}.bitmovinplayer-container{padding:0;margin:0;position:relative;overflow:hidden;min-height:150px;min-width:260px;box-sizing:content-box;background-color:transparent;width:100%;height:100%}.bitmovinplayer-container:before{display:block;content:"";width:100%}.bitmovinplayer-container>canvas,.bitmovinplayer-container object,.bitmovinplayer-container video{position:absolute;top:0;left:0;bottom:0;right:0;width:100%;height:100%}.bitmovinplayer-container *{box-sizing:border-box;padding:0}.bitmovinplayer-container.aspect-16x9:before{padding-bottom:56.25%}.bitmovinplayer-container.aspect-16x10:before{padding-bottom:62.5%}.bitmovinplayer-container.aspect-4x3:before{padding-bottom:75%}.bitmovinplayer-container.aspect-3x2:before{padding-bottom:66.66%}.bitmovinplayer-container embed,.bitmovinplayer-container img,.bitmovinplayer-container object{height:100%}.bitmovinplayer-ad-container,.bitmovinplayer-container{width:100%;height:100%;background-color:#000;color:#fff;-webkit-touch-callout:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}.bitmovinplayer-ad-container video,.bitmovinplayer-container video{object-fit:contain;-o-object-fit:contain}html:-ms-fullscreen{width:100%;height:100%}:-webkit-full-screen{background-color:transparent;width:100%!important;height:100%!important}video:-webkit-full-screen+.bitmovinplayer-ctrl{background:#ccc}figure[data-fullscreen=true],figure[data-legacy-fullscreen=true]{max-width:100%;max-height:100%;width:100%!important;height:100%!important;background-color:#000!important;margin:0;padding:0;position:fixed!important;top:0!important;left:0!important}figure[data-legacy-fullscreen=true]{z-index:99999}.bitmovinplayer-error-message ul{text-align:left}.bitmovinplayer-error-message a{color:#31c5c7}.bitmovinplayer-container video::-webkit-media-controls-panel,.bitmovinplayer-container video::\--webkit-media-controls-play-button{display:none!important;-webkit-appearance:none}.bitmovinplayer-container video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}</style><style id="bitmovinplayer-no-select-style-node">.bitmovinplayer-no-select { -webkit-user-select: none; -moz-user-select: -moz-none; -ms-user-select: none; user-select: none; }</style></head>
+
+<body class="">
+<div id="sideNavWrapper">
+  <div id="sideNav" class="sidenav">
+    <div class="sideNavTitle"></div>
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    <ul>
+      <li><a href="/demos/"><i class="fa fa-th"></i> Demos</a></li>
+      <li><a href="https://bitmovin.com/encoding-service/">Encoding</a></li>
+      <li><a href="https://bitmovin.com/video-player/">Player</a></li>
+      <li><a href="https://bitmovin.com/video-analytics/">Analytics</a></li>
+      <li><a href="https://developer.bitmovin.com/">Developer</a></li>
+      <li><a href="https://bitmovin.com/blog/">Blog</a></li>
+      <li><a href="https://bitmovin.com/team/">Company</a></li>
+      <li><a href="https://dashboard.bitmovin.com/login">Login</a></li>
+    </ul>
+  </div>
+  <div id="sideNavOverlay"></div>
+</div>
+
+<div id="sideNavBtn">
+  <a href="javascript:void(0)" class="open-side" onclick="openNav()">
+    <img src="/demos/assets/mob-menu-white-c7db738f7b40bd4c0323d51f346b4626aca8fb8980ea79dbcb0ca8494f80a18d.svg" alt="Menu">
+  </a>
+</div>
+
+<header class="bm-header">
+  <nav class="bm-navbar">
+    <div class="auth bm-login">
+        <a href="https://dashboard.bitmovin.com/login">Login</a>
+        <span>or</span>
+        <a href="https://dashboard.bitmovin.com/signup">Sign Up</a>
+    </div>
+    <div class="bitmovin-nav">
+      <div class="bm-logo">
+        <a href="https://bitmovin.com">
+          <img src="/demos/assets/bitmovin-4b1e8761a40ed48de7fb8115f1cbc2a1bd3c8b41d8db76dd539b26218aed541c.svg" alt="Bitmovin">
+        </a>
+      </div>
+      <ul class="bm-navbar-left">
+        <li>
+          <a href="https://bitmovin.com/encoding-service/">
+            Encoding
+          </a>
+        </li>
+        <li>
+          <a href="https://bitmovin.com/video-player/">
+            Player
+          </a>
+        </li>
+        <li>
+          <a href="https://bitmovin.com/video-analytics/">
+            Analytics
+          </a>
+        </li>
+      </ul>
+
+      <ul class="bm-navbar-right">
+        <li>
+          <a href="https://developer.bitmovin.com/">
+            Developer
+</a>        </li>
+        <li>
+          <a href="/demos/">
+            Demos
+</a>        </li>
+        <li>
+          <a href="https://bitmovin.com/blog/">
+            Blog
+</a>        </li>
+        <li>
+          <a href="https://bitmovin.com/company/">
+            Company
+</a>        </li>
+      </ul>
+    </div>
+    <div style="clear:both;"></div>
+  </nav>
+  <div class="developerNav">
+    <ul class="devNav">
+<!--      <li class="home">-->
+<!--        <a href=">">-->
+<!--          <i class="fa fa-th"></i> Demos-->
+<!--        </a>-->
+<!--      </li>-->
+      <li class="documentation">
+        <a href="//developer.bitmovin.com/hc/">
+          Documentation
+        </a>
+      </li>
+      <li class="button-dropdown releaseNotes">
+        <a href="javascript:void(0)" class="dropdown-toggle">
+          Release Notes
+        </a>
+        <ul class="dropdown-menu" style="display: none;">
+          <li>
+            <a href="//developer.bitmovin.com/hc/en-us/articles/115001447093">
+              Player
+            </a>
+          </li>
+          <li>
+            <a href="//developer.bitmovin.com/hc/en-us/articles/360000267494-Encoding-Release-Notes">
+              Encoding
+            </a>
+          </li>
+          <li>
+            <a href="//bitmovin.com/release-notes-android-sdk/">
+              Android
+            </a>
+          </li>
+          <li>
+            <a href="//bitmovin.com/release-notes-ios-sdk/" style="text-transform:none">
+              iOS
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="button-dropdown apiReference">
+        <a href="javascript:void(0)" class="dropdown-toggle">
+          API Reference
+        </a>
+        <ul class="dropdown-menu" style="display: none;">
+          <li>
+            <a href="//bitmovin.com/encoding-documentation/bitmovin-api/">
+              Encoding
+            </a>
+          </li>
+          <li>
+            <a href="//developer.bitmovin.com/hc/en-us/articles/115001561533">
+              Player
+            </a>
+          </li>
+          <li>
+            <a href="//bitmovin.com/encoding-documentation/bitmovin-api/#/reference/analytics">
+              Analytics
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<script>
+  function openNav(){document.getElementById("sideNav").style.display="block",document.getElementById("sideNavWrapper").style.display="block",setTimeout(function(){document.getElementById("sideNav").style.width="250px"},100)}function closeNav(){document.getElementById("sideNav").style.width="0",setTimeout(function(){document.getElementById("sideNav").style.display="none",document.getElementById("sideNavWrapper").style.display="none"},500)}jQuery(document).ready(function($){$(".dropdown-toggle").click(function(){var t=$(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");$(".button-dropdown .dropdown-menu").hide(),$(".button-dropdown").removeClass("active"),t&&($(this).parents(".button-dropdown").children(".dropdown-menu").toggle(),$(this).parents(".button-dropdown").addClass("active"))}),$("#sideNavOverlay").bind("click",closeNav),$(document).bind("click",function(t){$(t.target).parents().hasClass("button-dropdown")||$(".button-dropdown .dropdown-menu").hide()}),$(document).bind("click",function(t){$(t.target).parents().hasClass("button-dropdown")||$(".button-dropdown").removeClass("active")})});</script>
+
+
+<div class="demo-detail vr-360 player">
+  <div class="demo-header banner-gradient">
+    <div class="container">
+      <div class="row category-header-row">
+        <div class="category-detail-wrapper col-sm-12 text-center text-lg-left">
+          <div class="category justify-content-center justify-content-lg-start">
+            <div class="category-image"><img src="/demos/assets/demos/player/vr-360/icon-e5c6e580253590d62b41791f254f5fe9cf49fbf3f8edc3952b3ea4e265e5a35a.svg" alt="Icon"></div>
+            <h1 class="demo-category ml-0 ml-sm-4">VR &amp; 360°</h1>
+          </div>
+          <div class="categories">
+            <span><a href="/demos/?category=player">→ See all player demos</a></span><br>
+            <span>→ <a href="/demos/">See all demos</a></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="demo-body">
+    <div class="container">
+
+      <div class="row mb-3">
+        <div class="col-md-8">
+          <div class="demo-title-description">
+            <h1>This demo shows the Bitmovin Player displaying a 360° video with VR</h1>
+          </div>
+        </div>
+        <div class="info-wrapper col-md-4 text-center text-md-right mt-3 mt-md-0">
+          <div class="info info-box text-md-right mt-3 mb-3 mt-md-0 mb-md-0 d-inline-block pt-3 pb-3 rounded">
+            <div id="bitmovin-info"><span class="player-info">Bitmovin Player Version 7.7.4</span></div>
+              <a target="_blank" onclick="amp.logDemoSourceCodeClicked('vr-360')" href="https://github.com/bitmovin/demos/tree/master/player/vr-360">
+                <div class="btn btn-sm btn-outline-dark">
+                  <i class="fa fa-lg fa-github"></i>
+                  <span class="pl-1">Demo Source Code</span>
+                </div>
+</a>          </div>
+        </div>
+      </div>
+
+        <div id="demo">
+        </div>
+
+      <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
+<script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer-vr.js"></script>
+<script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer-ui.js"></script>
+<link rel="stylesheet" href="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer-ui.css">
+
+<div class="vr-demo">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="description">
+                <p>This demo shows the Bitmovin Player displaying a 360° video with VR. The controls include 360° – 2D,
+                    3D, 2D stereo and 3D stereo, as well as resolution settings.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-9">
+            <div id="player" class="phone-frame">
+            <figure class="bitmovinplayer-container custom-aspect-ratio-player"><video id="bitmovinplayer-video-player" preload="auto" webkit-playsinline="" playsinline="" x-webkit-airplay="allow" style="display: none;"><source src="http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8"></video><canvas id="bitmovinplayer-vr-canvas" width="722" height="361" style="display: block; position: absolute;"></canvas><div class="bitmovinplayer-poster" style="display: none; background-image: url(https://bitmovin-a.akamaihd.net/content/playhouse-vr/poster.jpg);"></div><div id="bmpui-id-106" class="bmpui-ui-uicontainer bmpui-ui-skin-modern bmpui-ui-skin-smallscreen bmpui-flexbox bmpui-layout-max-width-800 bmpui-player-state-finished bmpui-controls-hidden"><div class="bmpui-container-wrapper"><div id="bmpui-id-17" class="bmpui-ui-subtitle-overlay bmpui-hidden"><div class="bmpui-container-wrapper"></div></div><div id="bmpui-id-81" class="bmpui-ui-buffering-overlay bmpui-hidden"><div class="bmpui-container-wrapper"><div id="bmpui-id-82" class="bmpui-ui-buffering-overlay-indicator"></div><div id="bmpui-id-83" class="bmpui-ui-buffering-overlay-indicator"></div><div id="bmpui-id-84" class="bmpui-ui-buffering-overlay-indicator"></div></div></div><div id="bmpui-id-85" class="bmpui-ui-cast-status-overlay bmpui-hidden"><div class="bmpui-container-wrapper"><span id="bmpui-id-86" class="bmpui-ui-cast-status-label"></span></div></div><div id="bmpui-id-87" class="bmpui-ui-playbacktoggle-overlay"><div class="bmpui-container-wrapper"><button type="button" id="bmpui-id-88" class="bmpui-ui-hugeplaybacktogglebutton bmpui-off"><span class="bmpui-label">Play/Pause</span><div class="bmpui-image"></div></button></div></div><div id="bmpui-id-80" class="bmpui-ui-controlbar bmpui-hidden"><div class="bmpui-container-wrapper"><div id="bmpui-id-79" class="bmpui-ui-container bmpui-controlbar-top"><div class="bmpui-container-wrapper"><span id="bmpui-id-70" class="bmpui-ui-playbacktimelabel" style="min-width: 43px;">02:17</span><div id="bmpui-id-77" class="bmpui-ui-seekbar"><div class="bmpui-seekbar"><div class="bmpui-seekbar-backdrop" style="transform: scaleX(0.99999);"></div><div class="bmpui-seekbar-bufferlevel" style="transform: scaleX(1.0024817518248175);"></div><div class="bmpui-seekbar-seekposition" style="transform: scaleX(0);"></div><div class="bmpui-seekbar-playbackposition" style="transform: scaleX(0.99999);"></div><div class="bmpui-seekbar-markers"></div><div class="bmpui-seekbar-playbackposition-marker" style="transform: translateX(0px);"></div></div><div id="bmpui-id-71" class="bmpui-ui-seekbar-label bmpui-hidden" style="left: 97.26640781563125%;"><div class="bmpui-container-wrapper"><div id="bmpui-id-76" class="bmpui-seekbar-label-inner"><div class="bmpui-container-wrapper"><div id="bmpui-id-74" class="bmpui-ui-component bmpui-seekbar-thumbnail"></div><div id="bmpui-id-75" class="bmpui-seekbar-label-metadata"><div class="bmpui-container-wrapper"><span id="bmpui-id-73" class="bmpui-ui-label bmpui-seekbar-label-title"></span><span id="bmpui-id-72" class="bmpui-ui-label bmpui-seekbar-label-time">02:12</span></div></div></div></div></div></div></div><span id="bmpui-id-78" class="bmpui-ui-playbacktimelabel bmpui-text-right" style="min-width: 43px;">02:17</span></div></div></div></div><div id="bmpui-id-97" class="bmpui-ui-titlebar bmpui-hidden"><div class="bmpui-container-wrapper"><span id="bmpui-id-89" class="bmpui-ui-label bmpui-label-metadata bmpui-label-metadata-title"></span><button type="button" id="bmpui-id-90" class="bmpui-ui-casttogglebutton bmpui-off bmpui-hidden"><span class="bmpui-label">Google Cast</span></button><button type="button" id="bmpui-id-91" class="bmpui-ui-vrtogglebutton bmpui-off"><span class="bmpui-label">VR</span></button><button type="button" id="bmpui-id-92" class="bmpui-ui-piptogglebutton bmpui-off"><span class="bmpui-label">Picture-in-Picture</span></button><button type="button" id="bmpui-id-93" class="bmpui-ui-airplaytogglebutton bmpui-off"><span class="bmpui-label">Apple AirPlay</span></button><button type="button" id="bmpui-id-94" class="bmpui-ui-volumetogglebutton bmpui-unmuted" data-bmpui-volume-level-tens="10"><span class="bmpui-label">Volume/Mute</span></button><button type="button" id="bmpui-id-95" class="bmpui-ui-settingstogglebutton bmpui-off"><span class="bmpui-label">Settings</span></button><button type="button" id="bmpui-id-96" class="bmpui-ui-fullscreentogglebutton bmpui-off"><span class="bmpui-label">Fullscreen</span></button></div></div><div id="bmpui-id-31" class="bmpui-ui-settings-panel bmpui-hidden"><div class="bmpui-container-wrapper"><div id="bmpui-id-20" class="bmpui-ui-settings-panel-item bmpui-hidden"><div class="bmpui-container-wrapper"><span id="bmpui-id-21" class="bmpui-ui-label">Video Quality</span><select id="bmpui-id-19" class="bmpui-ui-selectbox"><option value="auto">auto</option></select></div></div><div id="bmpui-id-23" class="bmpui-ui-settings-panel-item bmpui-hidden"><div class="bmpui-container-wrapper"><span id="bmpui-id-24" class="bmpui-ui-label">Speed</span><select id="bmpui-id-22" class="bmpui-ui-selectbox"><option value="0.25">0.25x</option><option value="0.5">0.5x</option><option value="1" selected="selected">Normal</option><option value="1.5">1.5x</option><option value="2">2x</option></select></div></div><div id="bmpui-id-26" class="bmpui-ui-settings-panel-item bmpui-hidden"><div class="bmpui-container-wrapper"><span id="bmpui-id-27" class="bmpui-ui-label">Audio Track</span><select id="bmpui-id-25" class="bmpui-ui-selectbox"><option value="0" selected="selected">english stereo</option></select></div></div><div id="bmpui-id-29" class="bmpui-ui-settings-panel-item bmpui-hidden"><div class="bmpui-container-wrapper"><span id="bmpui-id-30" class="bmpui-ui-label">Audio Quality</span><select id="bmpui-id-28" class="bmpui-ui-selectbox"><option value="auto">auto</option></select></div></div><div id="bmpui-id-67" class="bmpui-ui-settings-panel-item bmpui-last"><div class="bmpui-container-wrapper"><span id="bmpui-id-65" class="bmpui-ui-label"><span>Subtitles</span><button type="button" id="bmpui-id-64" class="bmpui-ui-subtitlesettingsopenbutton"><span class="bmpui-label">Subtitles settings</span></button></span><select id="bmpui-id-66" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">off</option><option value="CC1">Captions (CC1)</option></select></div></div><button type="button" id="bmpui-id-68" class="bmpui-ui-closebutton"><span class="bmpui-label">Close</span></button></div></div><div id="bmpui-id-32" class="bmpui-ui-settings-panel bmpui-hidden"><div class="bmpui-container-wrapper"><div id="bmpui-id-35" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-36" class="bmpui-ui-label">Font size</span><select id="bmpui-id-34" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="50">50%</option><option value="75">75%</option><option value="100">100%</option><option value="150">150%</option><option value="200">200%</option><option value="300">300%</option><option value="400">400%</option></select></div></div><div id="bmpui-id-38" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-39" class="bmpui-ui-label">Font family</span><select id="bmpui-id-37" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="monospacedserif">monospaced serif</option><option value="proportionalserif">proportional serif</option><option value="monospacedsansserif">monospaced sans serif</option><option value="proportionalsansserif">proportional sans serif</option><option value="casual">casual</option><option value="cursive">cursive</option><option value="smallcapital">small capital</option></select></div></div><div id="bmpui-id-41" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-42" class="bmpui-ui-label">Font color</span><select id="bmpui-id-40" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="white">white</option><option value="black">black</option><option value="red">red</option><option value="green">green</option><option value="blue">blue</option><option value="cyan">cyan</option><option value="yellow">yellow</option><option value="magenta">magenta</option></select></div></div><div id="bmpui-id-44" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-45" class="bmpui-ui-label">Font opacity</span><select id="bmpui-id-43" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="100">100%</option><option value="75">75%</option><option value="50">50%</option><option value="25">25%</option></select></div></div><div id="bmpui-id-47" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-48" class="bmpui-ui-label">Character edge</span><select id="bmpui-id-46" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="raised">raised</option><option value="depressed">depressed</option><option value="uniform">uniform</option><option value="dropshadowed">drop shadowed</option></select></div></div><div id="bmpui-id-50" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-51" class="bmpui-ui-label">Background color</span><select id="bmpui-id-49" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="white">white</option><option value="black">black</option><option value="red">red</option><option value="green">green</option><option value="blue">blue</option><option value="cyan">cyan</option><option value="yellow">yellow</option><option value="magenta">magenta</option></select></div></div><div id="bmpui-id-53" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-54" class="bmpui-ui-label">Background opacity</span><select id="bmpui-id-52" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="100">100%</option><option value="75">75%</option><option value="50">50%</option><option value="25">25%</option><option value="0">0%</option></select></div></div><div id="bmpui-id-56" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-57" class="bmpui-ui-label">Window color</span><select id="bmpui-id-55" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="white">white</option><option value="black">black</option><option value="red">red</option><option value="green">green</option><option value="blue">blue</option><option value="cyan">cyan</option><option value="yellow">yellow</option><option value="magenta">magenta</option></select></div></div><div id="bmpui-id-59" class="bmpui-ui-settings-panel-item"><div class="bmpui-container-wrapper"><span id="bmpui-id-60" class="bmpui-ui-label">Window opacity</span><select id="bmpui-id-58" class="bmpui-ui-selectbox" style="display: inline-block;"><option value="null">default</option><option value="100">100%</option><option value="75">75%</option><option value="50">50%</option><option value="25">25%</option><option value="0">0%</option></select></div></div><div id="bmpui-id-63" class="bmpui-ui-settings-panel-item bmpui-last"><div class="bmpui-container-wrapper"><button type="button" id="bmpui-id-61" class="bmpui-ui-subtitlesettingsclosebutton"><span class="bmpui-label">Back</span></button><button type="button" id="bmpui-id-62" class="bmpui-ui-subtitlesettingsresetbutton"><span class="bmpui-label">Reset</span></button></div></div><button type="button" id="bmpui-id-69" class="bmpui-ui-closebutton"><span class="bmpui-label">Close</span></button></div></div><div id="bmpui-id-100" class="bmpui-ui-recommendation-overlay"><div class="bmpui-container-wrapper"><button type="button" id="bmpui-id-101" class="bmpui-ui-hugereplaybutton"><span class="bmpui-label">Replay</span><div class="bmpui-image"></div></button></div></div><button type="button" id="bmpui-id-102" class="bmpui-ui-watermark" data-url="http://bitmovin.com"><span class="bmpui-label"></span></button><div id="bmpui-id-103" class="bmpui-ui-errormessage-overlay bmpui-hidden"><div class="bmpui-container-wrapper"><canvas class="bmpui-ui-tvnoisecanvas"></canvas><span id="bmpui-id-104" class="bmpui-ui-errormessage-label"></span></div></div></div></div></figure></div>
+        </div>
+        <div class="col-md-3">
+            <div class="col-md-12 input-hint">
+                <p>Control the view by dragging your mouse across the player or using your keyboard:</p>
+                <div class="player-control">
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <span class="keyboard-button">W</span>
+                            <span class="direction">UP</span>
+                        </div>
+                        <div class="col-md-12 col-xs-12">
+                            <span class="keyboard-button">S</span>
+                            <span class="direction">DOWN</span>
+                        </div>
+                        <div class="col-md-12 col-xs-12">
+                            <span class="keyboard-button">A</span>
+                            <span class="direction">LEFT</span>
+                        </div>
+                        <div class="col-md-12 col-xs-12">
+                            <span class="keyboard-button">D</span>
+                            <span class="direction">RIGHT</span>
+                        </div>
+                        <div class="col-md-12 col-xs-12">
+                            <span class="keyboard-button">Q</span>
+                            <span class="direction">Rotate counter clockwise</span>
+                        </div>
+                        <div class="col-md-12 col-xs-12">
+                            <span class="keyboard-button">E</span>
+                            <span class="direction">Rotate clockwise</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-6 code-column">
+            <div class="code-panel"><div class="code-panel-header"><a href="https://github.com/bitmovin/demos/tree/master/player/vr-360/demo.js">demo.js</a><span class="demo-language">js</span></div><div class="code-panel-body"><pre><code><span style="color: #66d9ef">const</span> <span style="color: #ffffff">conf</span> <span style="color: #f92672">=</span> <span style="color: #ffffff">{</span>
+  <span style="color: #a6e22e">key</span><span style="color: #ffffff">:</span> <span style="color: #e6db74">'&lt;YOUR PLAYER KEY HERE&gt;'</span><span style="color: #ffffff">,</span>
+  <span style="color: #a6e22e">source</span><span style="color: #ffffff">:</span> <span style="color: #ffffff">{</span>
+    <span style="color: #a6e22e">dash</span><span style="color: #ffffff">:</span>
+      <span style="color: #e6db74">'http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8'</span><span style="color: #ffffff">,</span>
+    <span style="color: #a6e22e">hls</span><span style="color: #ffffff">:</span>
+      <span style="color: #e6db74">http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8</span><span style="color: #ffffff">,</span>
+    <span style="color: #a6e22e">progressive</span><span style="color: #ffffff">:</span>
+      <span style="color: #e6db74">'https://bitmovin.com/player-content/playhouse-vr/progressive.mp4'</span><span style="color: #ffffff">,</span>
+    <span style="color: #a6e22e">poster</span><span style="color: #ffffff">:</span>
+      <span style="color: #e6db74">'https://bitmovin-a.akamaihd.net/content/playhouse-vr/poster.jpg'</span><span style="color: #ffffff">,</span>
+    <span style="color: #a6e22e">vr</span><span style="color: #ffffff">:</span> <span style="color: #ffffff">{</span>
+      <span style="color: #a6e22e">startupMode</span><span style="color: #ffffff">:</span> <span style="color: #e6db74">'2d'</span><span style="color: #ffffff">,</span>
+      <span style="color: #a6e22e">startPosition</span><span style="color: #ffffff">:</span> <span style="color: #ae81ff">180</span><span style="color: #ffffff">,</span>
+    <span style="color: #ffffff">},</span>
+  <span style="color: #ffffff">},</span>
+  <span style="color: #a6e22e">style</span><span style="color: #ffffff">:</span> <span style="color: #ffffff">{</span>
+    <span style="color: #a6e22e">aspectratio</span><span style="color: #ffffff">:</span> <span style="color: #e6db74">'2:1'</span><span style="color: #ffffff">,</span>
+  <span style="color: #ffffff">},</span>
+<span style="color: #ffffff">};</span></code></pre></div></div>
+        </div>
+        <div class="col-md-6 info-column">
+            <h2 class="description-header">HTML5 VR and 360° Adaptive Video Streaming</h2>
+            <p>The Bitmovin adaptive <a href="https://bitmovin.com/html5-player/">HTML5 video player</a> is the ideal
+                solution for
+                360° and VR playback for a number of reasons. If you are developing a 360° app or platform, then you are
+                probably already
+                aware of the challenges involved in streaming immersive video due to the extra file size. This makes the
+                quality of your adaption logic of paramount importance. The patented technology of the Bitmovin Player
+                puts it a few steps ahead of its nearest competitors.</p>
+            <p>For more information about VR Playback head over to our
+                <a href="https://developer.bitmovin.com/hc/en-us/articles/115001514354-How-to-Setup-VR-and-360-Video-Playback">tutorial
+                    section</a>.</p>
+        </div>
+    </div>
+</div><style>body .vr-demo p {
+    font-size: 18px;
+}
+
+div.input-hint {
+    display: none;
+}
+
+@media (min-width: 991px) {
+    div.input-hint {
+        margin-top: 30px;
+        display: block;;
+    }
+
+    div.code-column {
+        float: right;
+    }
+
+    div.info-column {
+        float: left;
+    }
+}
+
+div.code-example {
+    width: 95%;
+}
+
+h2.description-header {
+    margin: 30px 0 20px 0;
+}
+
+.player-control {
+    margin-top: 20px;
+}
+
+.player-control .keyboard-button {
+    float: left;
+    margin: 0 10px 5px 0;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #EDEDED;
+    border: 1px solid #868484;
+    font-weight: bold;
+}
+
+.direction {
+    float: left;
+    line-height: 36px;
+}
+
+.first-paragraph {
+    margin-top: 15px;
+}
+
+body .demo-detail .description {
+    margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+    #player {
+        margin-top: 0;
+    }
+
+    #player .bitmovinplayer-container > .bmpui-ui-uicontainer {
+        position: absolute;
+        width: auto;
+        height: auto;
+        right: 2.5%;
+        left: 2.5%;
+        top: -4%;
+        bottom: 5%;
+    }
+}
+
+body:not(.fullscreen) :not(.no-frame).phone-frame::before {
+    top: 0;
+    left: 0;
+}
+</style><script>var conf={key:"29ba4a30-8b5e-4336-a7dd-c94ff3b25f30",source:{dash:"http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8",hls:"http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8",progressive:"http://secure-cf-c.ooyala.com/RhYjJtZjE6LIbt8gmYYpVWcMAIctUtWz/1/ts/1_4_3840_1920_8000_main.m3u8",vr:{startupMode:"2d",startPosition:180}},style:{aspectratio:"2:1",ux:!1}};bitmovin.player("player").setup(conf).then(function(player){bitmovin.playerui.UIManager.Factory.buildModernSmallScreenUI(player)});</script>
+
+    </div>
+  </div>
+</div>
+
+<div class="row cta p-5 bg-transparent m-0">
+  <div class="col-12 text-center pt-4 pb-4">
+    <h4>Create an account to get started!</h4>
+    <div class="mt-4">
+      <a href="https://dashboard.bitmovin.com/signup" onclick="amp.logCtaClicked('vr-360')" target="_blank">
+        <button class="btn btn-success">Sign Up for Free</button>
+      </a>
+    </div>
+    <div class="mt-2 text-muted">
+      No credit card required.
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <div class="footer-content container-fluid">
+    <div class="container">
+      <div class="row social">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/bitmovin" target="_blank">
+              <div class="rounded-circle social-icon facebook">
+                <img src="/demos/assets/social/facebook-02f6b6d0a489af43f8a8b23a14188405fdeca972100320a8d5ed6cc2c8e183c9.svg" alt="Facebook">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/bitmovin" target="_blank">
+              <div class="rounded-circle social-icon twitter">
+                <img src="/demos/assets/social/twitter-d527d2c620f8c52a92bee865e8e469d91be48fc7aaac17b8d793a55bf6dcaf35.svg" alt="Twitter">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/bitmovin" target="_blank">
+              <div class="rounded-circle social-icon linkedin">
+                <img src="/demos/assets/social/linkedin-7e6f940ff1867cc2aab6a353bf577fd89a998e0f06b87ac371fffb2862ba84f9.svg" alt="LinkedIn">
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="https://plus.google.com/111920568576140129023/posts" target="_blank">
+              <div class="rounded-circle social-icon google">
+                <img src="/demos/assets/social/google-3f2bbfa2b802523c4a2e50eff282393fb1febb169a52c14a8bad81b37184e57d.svg" alt="Google">
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <hr>
+      <div class="row menu">
+        <div class="col-lg-3">
+          <h5>Company</h5>
+          <ul>
+            <li>
+              <a href="https://bitmovin.com/team" target="_blank">About Bitmovin</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/pricing" target="_blank">Pricing</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/awards-and-memberships/" target="_blank">Awards and Memberships</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/careers" target="_blank">Careers</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/partners" target="_blank">Partners</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/contact" target="_blank">Contacting Bitmovin</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/legal-notice" target="_blank">Legal Notice</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/terms" target="_blank">Terms and Conditions</a>
+            </li>
+            <li>
+              <a href="https://bitmovin.com/press" target="_blank">Press</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Support</h5>
+          <ul>
+            <li>
+              <a href="https://developer.bitmovin.com" target="_blank">Docs and Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>News &amp; Events</h5>
+          <ul>
+            <li>
+              <a href="https://bitmovin.com/blog" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a href="https://us3.campaign-archive.com/home/?u=f4248fad0ea47344e8223f281&amp;id=92fe2b21d4" target="_blank">Newsletter
+                Archive</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Contact</h5>
+          <div class="ul">
+            <p>
+              <br>
+              <b>Bitmovin Inc.</b><br>
+              301 Howard Street, Suite 1800<br>
+              San Francisco | CA 94105 | USA<br>
+              1-833-248-6686
+            </p>
+            <p>
+              Schleppe Platz 7<br>
+              9020 Klagenfurt | Austria | Europe<br>
+              +43 463-203-014<br>
+              <a href="https://bitmovin.com/contact-bitmovin/">Contact Us</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-xl-2">
+          ©<span class="current-year">2018</span> Bitmovin Inc
+        </div>
+        <div class="col-lg-12 col-xl-8">
+        <span class="location">
+          San Francisco
+        </span>
+          •
+          <span class="location">
+          Chicago
+        </span>
+          •
+          <span class="location">
+          Seattle
+        </span>
+          •
+          <span class="location">
+          New York
+        </span>
+          •
+          <span class="location">
+          Amsterdam
+        </span>
+          •
+          <span class="location">
+          Vienna
+        </span>
+          •
+        <span class="location">
+          Klagenfurt
+        </span>
+        •
+          <span class="location">
+          London
+        </span>
+          •
+          <span class="location">
+          Hong Kong
+        </span>
+          •
+          <span class="location">
+          Sao Paulo
+        </span>
+        </div>
+        <div class="col-lg-12 col-xl-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+    var allCategories = ['player'];
+    var additionalInfo = [];
+    if (window.bitmovin) {
+        if (window.bitmovin.analytics) {
+            additionalInfo.push('<span class="analytics-info">Analytics Version ' + window.bitmovin.analytics.version + '</span>');
+        }
+        else if (window.bitmovin.player) {
+            additionalInfo.push('<span class="player-info">Bitmovin Player Version ' + window.bitmovin.player.version + '</span>');
+        }
+    }
+    if (additionalInfo.length > 0) {
+        $('#bitmovin-info').html(additionalInfo.join(' | '));
+    }
+</script>
+<script>
+  (function() {
+    amp.logDemoPageView('vr-360');
+  })()
+</script>
+
+
+<script>
+  var currentYearContainers = document.getElementsByClassName("current-year");
+  if (currentYearContainers && currentYearContainers.length > 0) {
+    var date = new Date, currentYear = date.getFullYear();
+    for (var i = 0; i < currentYearContainers.length; i++) {
+      currentYearContainers[i].innerHTML = "" + currentYear;
+    }
+  }
+</script>
+</body></html>

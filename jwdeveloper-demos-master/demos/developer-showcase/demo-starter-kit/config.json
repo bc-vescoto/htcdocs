@@ -1,0 +1,14 @@
+{
+  "title": "Demo Starter Kit",
+  "description": "Create your own demo! We've provided a basic demo setup to help you get started.",
+  "license": "All",
+  "showCode": true,
+  "layout": "horizontal",
+  "apiCalls": [
+    ""
+  ],
+  "author": {
+  	"name": "JW Player",
+  	"githubUsername": "jwplayer"
+  }
+}

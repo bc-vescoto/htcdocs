@@ -1,0 +1,48 @@
+#container {
+	width:1100px; 
+}
+
+.ad {
+	border: 1px solid #ccc;
+	position: relative;
+	z-index: 10;
+	margin: 0 10px 10px 0;
+	background-color: rgba(11, 126, 244, .1);
+}
+
+#topAd {
+	width:728px; 
+	height: 60px;
+	margin-bottom: 13px;
+	float: left;
+}
+
+#leftAd {
+	width:160px; 
+	height:600px;
+	float: left;
+}
+
+#myElement {
+	float: left;
+	position: relative;
+	margin-right: 10px;
+}
+
+#rightAd {
+	width:300px; 
+	height:250px;
+	display: flex;
+	margin-left: 10px;
+}
+
+#bottomAd {
+	width:480px; 
+	height:32px;
+	display: flex;
+	top: -20px;
+}
+
+p {
+	text-align: left;
+}

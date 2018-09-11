@@ -1,0 +1,40 @@
+{
+  "ATTENTION": "THIS FILE IS MANAGED BY JW PLAYER. PLEASE DO NOT MODIFY!",
+  "categories": [
+		{
+			"name": "All Demos",
+			"directory": "",
+			"description": "Below you can find demos and code examples for all levels of developers implementing JW Player.<br>Check back as more demos and examples are added to support new features."
+		},
+    {
+      "name": "Basic",
+      "directory": "basic",
+			"description": "Below you can find basic demos and code examples to show you how to implement the JavaScript API.<br>Check back as more demos and examples are added to support new features."
+    },
+    {
+      "name": "Advanced",
+      "directory": "advanced",
+			"description": "Below you can find advanced demos and code examples extending JW Player feature functionality using the JavaScript API.<br>Check back as more demos and examples are added to support new features."
+    },
+    {
+      "name": "Developer Showcase",
+      "directory": "developer-showcase",
+			"description": "Below you can find a starter kit to create your own demo along with demos and code examples submitted by our users.<br>Check back as more demos and examples are added to support new features."
+    },
+    {
+      "name": "Innovation",
+      "directory": "innovation",
+			"description": "Below you can find experimental demos and code examples combining JW Player with other plugins and APIs in fun, creative ways.<br>Check back as more demos and examples are added to support new features."
+    },
+    {
+      "name": "Toolbox",
+      "directory": "toolbox",
+			"description": "Below you can find demos and code examples visualizing out of the box JW Player feature functionality.<br>Check back as more demos and examples are added to support new features."
+    },
+    {
+      "name": "Customization",
+      "directory": "customization",
+			"description": "Below you can find enterprise-oriented demos and code examples to inspire custom implementations that feature your content and brand.<br>Check back as more demos and examples are added to support new features."
+    }
+  ]
+}

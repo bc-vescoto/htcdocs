@@ -1,0 +1,54 @@
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{&title}}</title>
+  <meta name="description" content="{{description}}" />
+  {{^env.dev}}
+    <meta name="google-site-verification" content="ke-K2lvR7rSTzOGVR7pIDw0dUKhTzsCScFN753TjgXs" />
+    <meta property="og:title" content="{{&title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="//{{&path.host}}/img/demos-fb-share.png">
+    <meta property="og:url" content="//{{&path.host}}{{&path.href}}">
+    <meta property="og:site_name" content="JW Player Demos &amp; Code Examples">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jwplayer">
+    <meta name="twitter:creator" content="@jwplayer">
+    <meta name="twitter:title" content="{{&title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta name="twitter:image" content="//{{&path.host}}/img/demos-twitter-share.png">
+    <meta itemprop="name" content="{{&title}}">
+    <meta itemprop="description" content="{{description}}">
+    <meta itemprop="image" content="//{{&path.host}}/img/demos-twitter-share.png">
+
+
+  {{/env.dev}}
+  <link rel="shortcut icon" href="{{&path.file}}img/favicon.ico" type="image/x-icon" />
+	{{#env.dev}}
+  <link rel="stylesheet" href="{{&path.file}}css/developer.css">
+	{{/env.dev}}
+	{{^env.dev}}
+	<link rel="stylesheet" href="{{&path.file}}css/developer.min.css">
+	{{/env.dev}}
+  {{#css}}
+    <link rel="stylesheet" href="css/build.css">
+  {{/css}}
+  {{#env.prod}}
+    <link rel="canonical" href="//{{&path.host}}" />
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MBF9PW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MBF9PW');</script>
+  {{/env.prod}}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	{{#env.dev}}
+  <script src="{{&path.file}}js/developer.js"></script>
+	{{/env.dev}}
+	{{^env.dev}}
+	<script src="{{&path.file}}js/developer.min.js"></script>
+	{{/env.dev}}
+</head>

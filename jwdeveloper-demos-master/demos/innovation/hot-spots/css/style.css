@@ -1,0 +1,26 @@
+
+#hotspots {
+    width: 720px;
+    height: 405px;
+    position: absolute;
+    z-index: 99;
+    pointer-events: none;
+    margin: 0 auto;
+    left: 24%;
+}
+
+#hotspots span {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-image: url(../assets/spot.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    opacity: 0.5;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: 0.2s;
+    transform: scale(0,0);
+    -webkit-transition: 0.2s;
+    -webkit-transform: scale(0,0);
+}

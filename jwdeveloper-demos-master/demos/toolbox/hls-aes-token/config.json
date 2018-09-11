@@ -1,0 +1,13 @@
+{
+	"title": "HLS-AES-Token",
+	"description": "This demo shows the ability to pass a token with a key request.",
+	"license": "Enterprise",
+	"showCode": false,
+	"apiCalls": [
+		""
+	],
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

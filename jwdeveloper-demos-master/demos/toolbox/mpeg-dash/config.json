@@ -1,0 +1,13 @@
+{
+	"title": "MPEG-DASH",
+	"description": "This demo shows adaptive streaming with MPEG-DASH.",
+	"license": "All",
+	"showCode": true,
+	"apiCalls": [
+		""
+	],
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

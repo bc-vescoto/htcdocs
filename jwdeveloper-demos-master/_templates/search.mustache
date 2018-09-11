@@ -1,0 +1,41 @@
+{{> document-top}}
+
+<div class="demos demos-search">
+
+  {{> demos-index-header}}
+
+  <div class="demo-index demo-index-{{indexType}}">
+
+    <ul class="demo-index-nav">
+      {{#categories}}
+        <li><a href="{{&path.href}}{{#directory}}{{directory}}{{/directory}}"{{#current}} class="selected"{{/current}}>{{name}}</a></li>
+      {{/categories}}
+    </ul>
+
+    <p class="demo-index-desc demo-index-search-results">
+      Search results for: <strong></strong>
+    </p>
+
+    <p class="demo-index-desc demo-index-search-results-empty">
+			Your search <strong></strong> did not match any demos.
+    </p>
+
+    <ul class="demo-index-list"></ul>
+
+    <div class="demo-index-list-empty">
+			<p>Search Tips</p>
+			<ul>
+				<li>Double check your spelling.</li>
+				<li>Try using single words (e.g. 360, adaptive).</li>
+				<li>Try searching for a feature that is less specific.</li>
+				<li>Select an API call from our type-ahead suggestions.</li>
+				<li>See our <a href="{{&path.file}}jw-player/docs/developer-guide/api/javascript_api_reference/">JavaScript API Reference</a> for all available API calls and responses.</li>
+				<li>Or if <a class="feeling-nerdy" href="#">you're feeling nerdy</a>, we'll show you a random demo!</li>
+			</ul>
+		</div>
+
+  </div>
+
+</div>
+
+{{> document-bottom}}

@@ -1,0 +1,237 @@
+.navbar {
+    position: fixed;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    background: white;
+    float: left;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar__logodiv {
+  float: left;
+  width: 25%;
+}
+
+a.navbar__logo {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+a {
+  color: black !important;
+  font-size: 17px !important;
+  letter-spacing: 2px;
+}
+
+a:hover{
+  text-decoration: none !important;
+  border-bottom: 3px solid #03a8e1 !important;
+}
+.navbar__menudiv{
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+.navbar__mid{
+  float: left;
+  width: 50%;
+  padding: 5%;
+}
+
+.navbar__in{
+  width: 100%;
+  height: 100px;
+  float: left;
+}
+
+.navbar__menu li {
+  margin-left: 4pt;
+  backface-visibility: hidden;
+  display: inline-block;
+  padding-top: 15%;
+  padding-left: 15%;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+}
+
+.navbar__menu {
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+
+.pageone{
+  width: 100%;
+  float: left;
+  background-color: black;
+}
+
+.pageone_int{
+  float: left;
+  width: 100%;
+}
+
+.btn-grad {
+    color: #fff;
+    background-color: black;
+    border-color: #ccc;
+    width: 100%;
+    padding: 5%;
+    border: 3px solid transparent;
+    border-radius: 6px;
+}
+
+.btn-grad:hover {
+  background-image: linear-gradient(-45deg, #53cf9a,#53cf9a,#48a7c2,#4155b3,#7e6bd1);
+}
+
+.controls {
+  padding: 2%;
+}
+/*  Footer*/
+
+.footer{
+  float: left;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.contact {
+  padding: 5%;
+}
+
+.copyr{
+  padding-top: 10%;
+  text-align: center;
+}
+
+/* TAKE OUT THE TITLE WHEN PAUSED */
+.oo-player-container .oo-state-screen .oo-state-screen-info .oo-state-screen-title, .oo-player-container .oo-spinner-screen .oo-state-screen-info .oo-state-screen-title {
+    font-size: 1.6em;
+    font-family: "Roboto Condensed",sans-serif;
+    font-weight: bold;
+    width: 0;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+.oo-player-container .oo-state-screen .oo-fading-underlay.oo-animate-fade, .oo-player-container .oo-spinner-screen .oo-fading-underlay.oo-animate-fade {
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+/*  Volume scroll css */
+.range {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  margin-top: 10px;
+  transform: translate(-50%, -50%);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  background: linear-gradient(-45deg, #53cf9a,#53cf9a,#48a7c2,#4155b3,#7e6bd1);
+  height: 2px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-moz-range-track {
+  -moz-appearance: none;
+  background: linear-gradient(-45deg, #53cf9a,#53cf9a,#48a7c2,#4155b3,#7e6bd1);
+  height: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 2px solid;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  max-width: 80px;
+  position: relative;
+  bottom: 11px;
+  background-color: #1d1c25;
+  cursor: -webkit-grab;
+
+  -webkit-transition: border 1000ms ease;
+  transition: border 1000ms ease;
+}
+
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  border: 2px solid;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  max-width: 80px;
+  position: relative;
+  bottom: 11px;
+  background-color: #1d1c25;
+  cursor: -moz-grab;
+  -moz-transition: border 1000ms ease;
+  transition: border 1000ms ease;
+}
+
+
+
+.range.blue::-webkit-slider-thumb {
+   border-color: #53cf9a;
+}
+
+.range.ltpurple::-webkit-slider-thumb {
+   border-color: #53cf9a;
+}
+
+.range.purple::-webkit-slider-thumb {
+   border-color: #48a7c2;
+}
+
+.range.pink::-webkit-slider-thumb {
+   border-color: #4155b3;
+}
+
+.range.blue::-moz-range-thumb {
+   border-color: #7e6bd1;
+}
+/*
+.range.ltpurple::-moz-range-thumb {
+   border-color: rgb(87,111,230);
+}
+
+.range.purple::-moz-range-thumb {
+   border-color: rgb(152,68,183);
+}
+
+.range.pink::-moz-range-thumb {
+   border-color: rgb(255,53,127);
+}
+*/
+input[type=range]::-webkit-slider-thumb:active {
+  cursor: -webkit-grabbing;
+}
+
+input[type=range]::-moz-range-thumb:active {
+  cursor: -moz-grabbing;
+}
+
+h4 {
+  color: white !important;
+}

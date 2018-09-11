@@ -1,0 +1,120 @@
+.navbar {
+    position: fixed;
+    min-height: 50px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    background: white;
+    float: left;
+    width: 100%;
+    height: 60px;
+}
+
+.navbar__logodiv {
+  float: left;
+  width: 25%;
+}
+
+a.navbar__logo {
+  height: 100%;
+  width: 100%;
+  float: left;
+}
+
+a {
+  color: black !important;
+  font-size: 17px !important;
+  letter-spacing: 2px;
+}
+
+a:hover{
+  text-decoration: none !important;
+  border-bottom: 3px solid #03a8e1 !important;
+}
+.navbar__menudiv{
+  float: left;
+  width: 25%;
+  height: 100%;
+}
+
+.navbar__mid{
+  float: left;
+  width: 50%;
+  padding: 5%;
+}
+
+.navbar__in{
+  width: 100%;
+  height: 100px;
+  float: left;
+}
+
+.navbar__menu li {
+  margin-left: 4pt;
+  backface-visibility: hidden;
+  display: inline-block;
+  padding-top: 15%;
+  padding-left: 15%;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+}
+
+.navbar__menu {
+  width: 100%;
+  float: left;
+  height: 100%;
+}
+
+.pageone{
+  width: 100%;
+  float: left;
+  background-color: black;
+  z-index: 20;
+}
+
+.pageone_int{
+  float: left;
+  width: 100%;
+}
+
+.btn-grad {
+    color: #fff;
+    background-color: black;
+    border-color: #ccc;
+    width: 100%;
+    padding: 5%;
+    border: 3px solid transparent;
+    border-radius: 6px;
+}
+
+.btn-grad:hover {
+  background-image: linear-gradient(-45deg, #53cf9a,#53cf9a,#48a7c2,#4155b3,#7e6bd1);
+}
+
+.controls {
+  padding: 2%;
+}
+/*  Footer*/
+
+.footer{
+  float: left;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+}
+
+.contact {
+  padding: 5%;
+}
+
+.copyr{
+  padding-top: 10%;
+  text-align: center;
+}
+
+#alert{
+  color: white;
+  text-align: center;
+}

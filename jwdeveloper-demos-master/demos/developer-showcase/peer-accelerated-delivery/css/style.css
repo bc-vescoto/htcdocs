@@ -1,0 +1,33 @@
+#streamroot-container {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#p2pPercentageComponent .p2pCircle {
+  background-color: transparent !important;
+}
+
+#streamroot-graphs-left {
+  display: none;
+}
+
+@media all and (min-width: 800px) {
+  #streamroot-container { flex-wrap: nowrap; }
+  #streamroot-graphs-left { display: block; }
+
+}
+
+#streamroot-description {
+    text-align: left;
+}
+
+#warning-not-compatible {
+    display: none;
+    border: 1px solid #CF041C;
+    color: #CF041C;
+    padding: 10px;
+    margin: 10px 0px;
+}

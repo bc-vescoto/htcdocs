@@ -1,0 +1,13 @@
+{
+  "title": "A Custom Error Message",
+  "description": "A demo of how users can control player behavior when an error occurs.",
+  "license": "All",
+    	"showCode": true,
+	"apiCalls": [
+		"load()", "play()", "on('buffer')", "on('play')"
+	],
+	"author": {
+		"name": "JW Player",
+		"githubUsername": "jwplayer"
+	}
+}

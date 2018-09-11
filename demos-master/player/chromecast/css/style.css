@@ -1,0 +1,29 @@
+.img {
+    width: 75%;
+    max-width: 700px;
+}
+
+body .demo-detail .code-example {
+    margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+    .player-col {
+        float: left;
+    }
+
+    .code-col {
+        float: right;
+    }
+}
+
+@media (max-width: 768px) {
+    .img {
+        width: 100%;
+    }
+}
+
+body:not(.fullscreen) :not(.no-frame).notebook-frame::before {
+    top: 0;
+    left: 0;
+}
