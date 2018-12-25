@@ -6,32 +6,23 @@
 
   var assets = [
     {
-      url: 'https://bitmovin-demos.commondatastorage.googleapis.com/mozillaAV1_Oct2017/e87fb2378f01103d5d6e477a4ef6892dc714e614_v1/stream.mpd',
-      codec: 'av1.experimental.e87fb2378f01103d5d6e477a4ef6892dc714e614',
-      poster: poster
-    },
-    {
-      url: 'https://bitmovin-demos.commondatastorage.googleapis.com/av1/f5bdeac22930ff4c6b219be49c843db35970b918_v1/stream.mpd',
-      codec: 'av1.experimental.f5bdeac22930ff4c6b219be49c843db35970b918',
-      poster: poster
-    },
-    {
-      // url: 'https://bitmovin-a.akamaihd.net/webpages/demos/content/av1/mozilla/stream.mpd',
-      url: 'https://bitbucketireland.s3.amazonaws.com/av1/aadbb0251996c8ebb8310567bea330ab7ae9abe4_v2_tiles/stream.mpd',
-      codec: 'av1.experimental.aadbb0251996c8ebb8310567bea330ab7ae9abe4',
-      poster: poster
-    },
-    {
-      url: 'https://bitbucketireland.s3.amazonaws.com/av1/aadbb0251996c8ebb8310567bea330ab7ae9abe4_v1/stream.mpd',
-      codec: 'av1.experimental.aadbb0251996c8ebb8310567bea330ab7ae9abe4',
-      poster: poster
-    },
-    {
-      url: 'https://bitmovin-a.akamaihd.net/webpages/demos/content/av1/chrome/stream.mpd',
+      url: 'https://storage.googleapis.com/bitmovin-demos/av1/stream.mpd',
       codec: 'av1',
+      poster: poster
+    },
+    {
+      url: 'https://storage.googleapis.com/bitmovin-demos/av1/stream_chrome.mpd',
+      codec: 'av01.0.00M.08',
       poster: poster
     }
   ];
+
+  var analyticsConfig = {
+    key: '45adcf9b-8f7c-4e28-91c5-50ba3d442cd4',
+    videoId: 'av1'
+  }
+
+  var analytics = bitmovin.analytics(analyticsConfig);
 
   function setPlayer() {
     if (player) {
@@ -39,6 +30,7 @@
     }
 
     player = bitmovin.player('player');
+    analytics.register(player);
     return player;
   }
 
@@ -69,8 +61,11 @@
         dash: asset.url,
         poster: asset.poster
       },
+      playback: {
+        muted: true
+      },
       events: {
-        onError: function (error) {
+        error: function (error) {
           if (!error || !error.message) {
             onPlayerError('Could not load AV1 stream. Please try to update your browser.');
           }

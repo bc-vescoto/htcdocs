@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>admin ui colour contrast</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js'></script>
+  <script  src="js/index.js"></script>
+</head>
+
+<body class="demo-disable-bg-image">
+  <table>
+      <thead>
+          <tr><th>First name</th><th>Last name</th></tr>
+      </thead>
+      <tbody data-bind="foreach: backgrounds">
+          <tr>
+              <td data-bind="text: backgrounds"></td>
+              <td data-bind="text: backgrounds.name"></td>
+          </tr>
+      </tbody>
+  </table>
+  </body>
+
+</html>

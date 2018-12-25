@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" ng-controller="MetaDataController" itemscope itemtype="http://schema.org/WebPage">
+
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <title ng-bind="metaTags.title">Holonis</title>
+    <base href="/">
+
+    <!-- dns-prefetch -->
+    <link rel="dns-prefetch" href="//holocdn.com">
+    <link rel="dns-prefetch" href="//process.fs.holonis.com">
+
+    <link rel="dns-prefetch" href="//apis.google.com">
+    <link rel="dns-prefetch" href="//accounts.google.com">
+    <link rel="dns-prefetch" href="//ssl.gstatic.com">
+
+    <link rel="dns-prefetch" href="//accounts.facebook.net">
+    <link rel="dns-prefetch" href="//staticxx.facebook.com">
+    <link rel="dns-prefetch" href="//facebook.com">
+    <link rel="dns-prefetch" href="//connect.facebook.net">
+
+    <link rel="dns-prefetch" href="//twitter.com">
+
+    <link rel="dns-prefetch" href="//instagram.com">
+
+    <link rel="dns-prefetch" href="//js.stripe.com">
+    <link rel="dns-prefetch" href="//q.stripe.com">
+
+    <link rel="dns-prefetch" href="//widget.intercom.io">
+    <link rel="dns-prefetch" href="//js.intercomcdn.com">
+
+    <link rel="dns-prefetch" href="//s7.addthis.com">
+    <link rel="dns-prefetch" href="//m.addthis.com">
+    <link rel="dns-prefetch" href="//m.addthisedge.com">
+
+    <link rel="dns-prefetch" href="//dialog.filepicker.io">
+    <link rel="dns-prefetch" href="//ajax.cloudflare.com">
+    <link rel="dns-prefetch" href="//cdn.embedly.com">
+
+    <link rel="dns-prefetch" href="//player.ooyala.com">
+
+    <script src="https://holocdn.com/polyfill-2.6.143.js"></script>
+    <script type="text/javascript" src="https://holocdn.com/prebid1.18.0.js"></script>
+    <!-- Prebid Config Section -->
+    <script>
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script>
+    <!-- Prebid Config Section END -->
+    <script>
+        if (location.hash.match(/\#\!/)) {
+            location.href = location.hash.replace('#!', '')
+        };
+    </script>
+    <script>
+        window.prerenderReady = false;
+    </script>
+
+    <!-- General META -->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="fragment" content="!">
+
+    <!-- Holonis Facebook Page -->
+    <meta property="fb:pages" content="455299931204829" />
+
+    <!-- Paginated Content Tags -->
+    <link rel="canonical" href="{{$state.current.canonical}}" ng-if="$state.current.canonical">
+    <link rel="prev" href="{{$state.current.prev}}" ng-if="$state.current.prev">
+    <link rel="next" href="{{$state.current.next}}" ng-if="$state.current.next">
+
+    <!--FB TAGS-->
+    <!--<meta property="fb:app_id" content="{{metaTags.basicMeta.fbAppId}}">-->
+
+    <meta name="{{key}}" property="{{key}}" content="{{key === 'image' ? (value | processImageURL : false) : value}}" ng-repeat="(key, value) in metaTags track by $index">
+    <meta property="{{key}}" content="{{key === 'image' ? (value | processImageURL : false) : value}}" ng-repeat="(key, value) in metaTagsProperties track by $index">
+
+    <!-- <meta name="{{metaTags}}" content="{{vm.metaTags}}> -->
+    <!-- Fav Icon -->
+    <link href="https://holocdn.com/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+
+    <!--Application CSS Files-->
+    <!-- TODO: need to minify -->
+    <link rel="stylesheet" href="https://holocdn.com/css/vendor-2.6.143.css">
+    <link rel="stylesheet" href="https://holocdn.com/css/common-2.6.143.css">
+    <link rel="stylesheet" href="https://holocdn.com/css/homescreen-2.6.143.css">
+    <link rel="stylesheet" href="https://holocdn.com/css/holonis-web-2.6.143.css">
+
+    <link rel="stylesheet" href="https://player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.css">
+
+    <!-- HTML5 Shim -->
+    <!--[if lt IE 9]>
+	  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TPVFHPS');</script>
+    <!-- End Google Tag Manager -->
+    <script>
+      var googletag = googletag || {};
+      googletag.cmd = googletag.cmd || [];
+      var pbjs = pbjs || {};
+      pbjs.que = pbjs.que || [];
+    </script>
+
+    <script>
+        var addthis_config = {
+            data_ga_property: 'UA-49849690-1',
+            data_ga_social: true
+        };
+    </script>
+    <img ng-src="{{value}}" ng-repeat="(key, value) in pixelData track by $index" noscript=1 height="1" width="1" style="display:none"
+    />
+
+    <!-- Google Analytics -->
+    <script>
+        window.ga = window.ga || function () {
+            (ga.q = ga.q || []).push(arguments)
+        };
+        ga.l = +new Date;
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+
+    <!-- Taboola Ads -->
+    <script type="text/javascript">
+      window._taboola = window._taboola || [];
+      _taboola.push({article:'auto'});
+      !function (e, f, u, i) {
+        if (!document.getElementById(i)){
+          e.async = 1;
+          e.src = u;
+          e.id = i;
+          f.parentNode.insertBefore(e, f);
+        }
+      }(document.createElement('script'),
+      document.getElementsByTagName('script')[0],
+      '//cdn.taboola.com/libtrc/worldlifestyle-holonis/loader.js',
+      'tb_loader_script');
+      if(window.performance && typeof window.performance.mark == 'function')
+        {window.performance.mark('tbl_ic');}
+    </script>
+    <!-- End Taboola Ads -->
+
+</head>
+
+<body ng-class="{ 'isOverflow' : $root.isOverflow, 'ds-modal-open': $root.state.dsModalOpened }">
+
+    <toaster-container toaster-options="{'time-out': 3500, 'animation-class': 'toast-top-full-width'}"></toaster-container>
+    <div class="ng-cloak slideRoute" ng-class="'{{$state.$current.animateClass}}'" data-ui-view="main" main-content fixed="400"></div>
+
+    <!-- <modal id="modal-login-prompt" type="homescreen" class="modal--no-close js__login-prompt-modal"></modal> -->
+
+    <div ng-include="'public/modules/core/templates/meta.template.html'"></div>
+
+    <script src="https://apis.google.com/js/client.js"></script>
+
+    <script src="https://js.stripe.com/v2/"></script>
+    <!-- Remove this script when angular-stripe implements lazy-loading: https://github.com/bendrucker/angular-stripe/issues/49 -->
+    <!-- TODO: need to minify -->
+
+    <script src="//connect.facebook.net/en_US/sdk.js?"></script>
+
+    <script src="https://player.ooyala.com/static/v4/production/core.min.js"></script>
+    <script src="https://player.ooyala.com/static/v4/production/ad-plugin/google_ima.min.js"></script>
+    <script src="https://player.ooyala.com/static/v4/production/video-plugin/main_html5.min.js"></script>
+    <script src="https://player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.js"></script>
+
+    <script src="https://holocdn.com/vendor-web-01-2.6.143.js"></script>
+    <script src="https://holocdn.com/vendor-web-02-2.6.143.js"></script>
+    <script src="https://holocdn.com/vendor-web-03-2.6.143.js"></script>
+
+    <script type="module" src="/holonis-web-2.6.143.js"></script>
+    <script nomodule src="https://holocdn.com/holonis-web-es5-2.6.143.js"></script>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPVFHPS" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

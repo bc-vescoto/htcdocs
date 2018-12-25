@@ -471,6 +471,10 @@ var multicodec = function () {
 
   var config = {
     key: '29ba4a30-8b5e-4336-a7dd-c94ff3b25f30',
+    analytics: {
+      key: '45adcf9b-8f7c-4e28-91c5-50ba3d442cd4',
+      videoId: 'multi-codec-streaming'
+    },
     source: {
       dash: '//bitmovin-a.akamaihd.net/webpages/demos/content/multi-codec/h264/stream.mpd',
       poster: 'images/comparison.jpg'
@@ -489,19 +493,19 @@ var multicodec = function () {
       muted: true
     },
     events: {
-      onPlay: function () {
+      play: function () {
         setupInterval();
       },
-      onStallStarted: function () {
+      stallstarted: function () {
         clearInterval(interval);
       },
-      onStallEnded: function () {
+      stallended: function () {
         setupInterval();
       },
-      onPaused: function () {
+      paused: function () {
         clearInterval(interval);
       },
-      onPlaybackFinished: function () {
+      playbackfinished: function () {
         clearInterval(interval);
       }
     }
@@ -527,14 +531,16 @@ var multicodec = function () {
   document.getElementById('compare-codec').innerHTML = getCodecImage(COMPARE_CODEC);
   document.getElementById('detected-browser').innerHTML = getBrowserImage(browser);
 
-  player = bitmovin.player('player-container');
-  player.setup(config).then(function () {
+  var playerContainer = document.getElementById('player-container');
+  player = new bitmovin.player.Player(playerContainer, config);
+
+  player.load(config.source).then(function () {
     player.preload();
     player.seek = function () {
     };
   });
 
-  player.addEventHandler(bitmovin.player.EVENT.ON_SEGMENT_REQUEST_FINISHED, function (segment) {
+  player.on(bitmovin.player.PlayerEvent.SegmentRequestFinished, function (segment) {
     if (segment.mimeType.indexOf('audio') >= 0) {
       return;
     }
@@ -542,7 +548,7 @@ var multicodec = function () {
     updateBandwidthData();
   });
 
-  player.addEventHandler(bitmovin.player.EVENT.ON_TIME_CHANGED, function (event) {
+  player.on(bitmovin.player.PlayerEvent.TimeChanged, function (event) {
     currentTime = event.time;
     shiftSegments();
   });

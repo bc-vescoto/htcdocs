@@ -1,0 +1,788 @@
+
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=11" /><title>
+	
+
+</title><link rel="stylesheet" href="http://dev.gimblesoft.com/pm_emr/Styles/Site.css" />
+
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../Scripts/Visits/XBAPReading.js" ></script>
+    
+    <script type="text/javascript" src="../Scripts/Visits/Visit_NoSOAP.js" ></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $("#menuDiv").click(function () {
+                var div = document.getElementById('siteMenu');
+                if (div.style.display == "none") {
+                    div.style.display = "inline";
+                } else {
+                    div.style.display = "none";
+                }
+            });
+
+            var url = window.location.href;
+            if (url.indexOf("PatientManagement") > -1) {
+                document.getElementById("divPM").style["background-color"] = "#d3e150";
+            }
+            else if (url.indexOf("Route") > -1) {
+                document.getElementById("divPM").style["background-color"] = "#d3e150";
+            }
+            else if (url.indexOf("Training") > -1) {
+                document.getElementById("divTR").style["background-color"] = "#d3e150";
+            }
+            else if (url.indexOf("Shop") > -1) {
+                document.getElementById("divSH").style["background-color"] = "#d3e150";
+            }
+        });
+
+        function closeTab() {
+
+            //var xmlVar = new XMLHttpsRequest();
+
+            //xmlVar.open("GET", "https://pm.cmwl.com/PM_EMR//AIWS.asmx?CloseSession", false);
+
+            //xmlVar.send(null);
+
+            //window.close();
+            open(location, '_self').close();
+        }
+    </script> 
+
+<link href="http://dev.gimblesoft.com/PM_EMR/WebResource.axd?d=hcXDZhXiidgsQUtEo5iT31-kFyeWPZhqlvTVlmqkW69yqoJIrnxIIRe_AtXDroJ4k_ex7ieGN4bdjSNpzkAL9qr5qLnBUmeAGWT8sH8-slBiFsdcJbuJT1HOtxcdADRLiPQElEsuMOpILIV9MrK4D2xnn7a0LWMD1X4VLNbfKy81&t=636276740700000000" type="text/css" rel="stylesheet" /><meta http-equiv='refresh' content='1800;url=~/SessionExpired.aspx'></head>
+<body style="margin: 0px; background-color:darkgray;">
+    <div class="content-wrapper" style="background-color:white;">
+    <form method="post" action="./Training.aspx" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="r6f9La+RGNREH9CgLgZgN0RZREQHl19+wqWfBDPoJQ/tO1naZ6KvzBeb95VGadZNy+DczupbVwmpZFouMBIiiJgmzy8iAsD1LasKy32nDHIYd8o43beyhnepuxs6jN4cwxT4MF2Qc2h6T9I+dCnGayID6Vur1s57MZ/wz5q4SsczRJYMazhmKe/t6QgpU6rLw1o/2wkDd1iZZKiHaTG0LEL+aKPyLDwLKnPFdLWZhYhhCVOgxt7tf8EftadLjwSzFsQMKyU0AS0CxiOh+YgplUnwjRnt2uRxSLzMDNagGhfU0gSksKaSc95ZVIhdmZzLBqUEAXwTOtouKiG9qFXHWdlnX3UFNJwAhPb7BuW/odFZ75Q97bkjlERcT+ebo8dZIm2t90Lg0nghhy3e20riRfHj7vfQ2sKyz+RiX5gogIKqD9lu8WEm75Kmzz7jQuMjv6Hvs3DpoQYwr0K0aRZNnbmVLyUPHPuIC0+K6hApcWuyMEu7+Uq6/CjfU4TJoSpGEW5KIZKeRRplV/lh+QScEXnHWr99jIehRQOaVByyb9pkVQZSMmQXm33SlpfvH+2vJn3LWSUx+l1ajxIz7kZzEjT5oxz6J4ML6KjX0qT+WpuBwocHzsVkpXYs/Zy3pOOE" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/PM_EMR/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZGScXxlQtZVskdijS9ocEuoqVmMd85ZPq5yYylIdC5JBY9ObAfyfINjhCnlNK6mg-Q2&amp;t=635823524460000000" type="text/javascript"></script>
+
+
+<script src="/PM_EMR/ScriptResource.axd?d=NJmAwtEo3Ipnlaxl6CMhvm-GUOjxZbWBRB9ZxcPSq9nbeVGzTSQ3-BCoYBDJvcjvn_-DnMgoBXDMpskOLKEoii4QPTnNRZwisy20m7_0mtVsvU1qGK1Vmy7HQpbaQmGtkZ0zLNJqXYLQ54ZcfT2OT1bQtdePI1jfHzgz8tk1eaQ1&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+<script src="/PM_EMR/ScriptResource.axd?d=dwY9oWetJoJoVpgL6Zq8OA3sIR-DZe3BXBjrnhAMDOIObStPwBccPS75pptk_taRYAgzKzyk5ltxODwpRT6We9srDQZINXOfwifYNbb6QgCkhXemIcbCEwniB4MwQ3fkmCQ2M-keouRPZDNRs-m2wq4aqeuDDRCGVtpEk_Bk5XY1&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+<script src="/PM_EMR/ScriptResource.axd?d=eE6V8nDbUVn0gtG6hKNX_F-EMf2VXPbSrSLP07t4nENCkTrL03DgffEJ2qy1q4XJCnJTrHzSy7jGHky5s9nMcvborN6GuzuYifQXVJL-jgR0nVN35uSIolXRg7rXfNYL0&amp;t=ac64ff3" type="text/javascript"></script>
+<script src="/PM_EMR/ScriptResource.axd?d=HEFpVKbnoeQjkjHkFKu3MM-E87GO_NQhq8HaB2sVvfa0xfGqAbltZ-Ua1hiYkXlUfpyh_BLbARBJCAZVqqYz19JaFWOl57vuytvXU1oe8jxIKM9g8qF9TetIsMNruI8_0&amp;t=ac64ff3" type="text/javascript"></script>
+<script src="/PM_EMR/ScriptResource.axd?d=VZs0JnQjYG0W76RVNwCub--OUj1QhJryPMM6BG2sREK6KpfnSlEYwCGbbPn5znx2mY0Q4UKmlaJMbE7JN8-n52sOc1d0GN7BRVgw3DMnbmP8insRXDMdQjbuuibKwsjZ0&amp;t=ac64ff3" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D30E041D" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="Su5FSmx2E58FydZP5n0DZu6G3Dt343fhihYHZYukRaXV2UoAfuXdl4gwpHtgy5g/gZpExp5eSrB3mxEMBPG58fOrgV5CbKa5bwvIN3B+I3gO1ql8iezkah6G/nW7bGmFYObVBs3AUzPaER2qRV9/qFj21g6RKSqG/rrX89Qs0ynsbknfARKAuiK5RoQ03cg2afIBzpokohrjk0cD7kyTsO7i+tMx4YBLchV1nZ3YNOKqwGV4d0URmEFq1pDme1i9zYTIxsjyYutN5BbH1r/FQZMm3dvGj3KWZ7a3mageNWybenYYnTbubefWeD9s5yoQ42kyg/pLU/1SfLVbbQo42ytjLkaPUPcqaTdnJK1POUay/eeUIsz2iKT38KWEvYSiqccKTjHhzQliVX86MSK2kNrIQJKKYwAekzue9O09PzM/jJWJOrmriq8sqzUE8sRy3H9qRU+2eeKabUoTqaW0qnlrMIcPtzPnPcE7ooPjgcZ6+kxg3GlqYJcEzPXvAhCf3Nvljg+EbX8c8ynZ7b50CdL9HSB6jAi+417VdGQxlPJ8rzXKe0bxrpjXeIfwE1K0f2epP/B09X4rPs7XxpheJJTzlp8RWazlE5DrGsll2lMJTHjDl22wL2D0ekIS66nA+5kM+xTDv3Th1xuaVu7rig==" />
+</div>
+        <header>
+            <div class="content-wrapper" style="background-color:#737d81; height:40px; padding-top:0px">
+                <div class="float-left">
+                    <div id="menuDiv" style="margin:0px; padding:7.5px">
+                        <img id="imgMenu" src="../Images/Pages/Home/hamburger_menu.png" style="height:25px;" />
+                    
+                    </div>
+                    <div id="siteMenu" class="dropdown-content" style="display:none;">
+                        
+                        <a id="lbnMenuHome" href="javascript:__doPostBack(&#39;ctl00$lbnMenuHome&#39;,&#39;&#39;)" style="text-decoration:none;"><span>HOME</span></a>
+                        <hr/>
+                        
+                        <a id="lbnMenuPM" href="javascript:__doPostBack(&#39;ctl00$lbnMenuPM&#39;,&#39;&#39;)" style="text-decoration:none;"><span>PRACTICE MANAGEMENT</span></a>
+                        <hr/>
+                        
+                        <a id="lbnMenuTRN" href="javascript:__doPostBack(&#39;ctl00$lbnMenuTRN&#39;,&#39;&#39;)" style="text-decoration:none;"><span>TRAINING</span></a>
+                        <hr/>
+                        
+                        <a id="lbnMenuShop" href="javascript:__doPostBack(&#39;ctl00$lbnMenuShop&#39;,&#39;&#39;)" style="text-decoration:none;"><span>SHOP & RESOURCES</span></a>
+                        <hr/>
+                        <a href="https://physician.centerformedicalweightloss.com/index.php/contact-us/">CONTACT US</a>
+                        <hr/>
+                        <a href="https://www.centerformedicalweightloss.com/">CMWL.COM</a>
+                    </div>
+
+
+                </div>
+                <div class="float-right">
+                    <span style="color:white; font-weight:bold;">
+                        Welcome
+                        <span id="lblUser"></span>.&nbsp;&nbsp;
+                    </span>
+                        <a onclick="closeTab();" id="lbNotUser" tabindex="998" class="NotUser" href="javascript:__doPostBack(&#39;ctl00$lbNotUser&#39;,&#39;&#39;)">
+                            <span style="color:#f5b834">
+                                Not
+                                <span id="lblUser2"></span>
+                                ?
+                            </span>
+                        </a>
+                    
+
+
+                    <input type="submit" name="ctl00$btnLogout" value="LOGOUT" onclick="closeTab();" id="btnLogout" tabindex="999" style="color:#333333;background-color:#ABB1B3;border-color:#ABB1B3;border-width:0px;border-style:None;font-weight:bold;height:40px;width:85px;" />
+                </div>
+            </div>
+
+
+        <div class="content-wrapper">
+            <div style="position:absolute; width:985px; text-align:right;">
+                <span style="font-weight:bold; font-size:20px;">
+                    <span id="lblCenterName"></span>
+                </span>
+            </div>
+
+            <div style="height:100px; vertical-align:bottom;">
+                
+                <input type="image" name="ctl00$ibnHome" id="ibnHome" src="../Images/cmwl_new_logo.png" style="border-style:None;height:80px;padding-left:15px; padding-right:30px;" />
+                
+                <div id="divPM" style="padding:15px 15px 15px 15px; display:inline; margin-left:100px; border-radius: 18px 18px 0px 0px;">
+                    
+                    <a id="lbnPM" href="javascript:__doPostBack(&#39;ctl00$lbnPM&#39;,&#39;&#39;)" style="text-decoration:none;"><span style="color:#737d81; text-decoration:none; font-weight:bold;">PRACTICE MANAGEMENT</span></a>
+                </div>
+                <div id="divTR" style="padding:15px 15px 15px 15px; display:inline; margin-left:25px; border-radius: 18px 18px 0px 0px;">
+                    
+                    <a id="lbnTRN" href="javascript:__doPostBack(&#39;ctl00$lbnTRN&#39;,&#39;&#39;)" style="text-decoration:none;"><span style="color:#737d81; text-decoration:none; font-weight:bold;">TRAINING</span></a>
+                </div>
+                <div id="divSH" style="padding:15px 15px 15px 15px; display:inline; margin-left:25px; border-radius: 18px 18px 0px 0px;">
+                    
+                    <a id="lbnShop" href="javascript:__doPostBack(&#39;ctl00$lbnShop&#39;,&#39;&#39;)" style="text-decoration:none;"><span style="color:#737d81; text-decoration:none; font-weight:bold;">SHOP & RESOURCES</span></a>
+                </div>   
+            </div>
+            <div style="background-color:#d3e150; height:28px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); margin-top:-2px;">
+
+            </div>
+        </div>
+    </header>
+        <div id="SiteDiv" >
+            <section class="content-wrapper main-content clear-fix">
+                
+    <script type="text/javascript">
+        function showV(video) {
+
+            if (video == 'p1') 
+                ooyalaplayerP1.style.display = 'block';
+            else if (video == 'p2')
+                ooyalaplayerP2.style.display = 'block';
+            else if (video == 'p3')
+                ooyalaplayerP3.style.display = 'block';
+            else if (video == 'p4')
+                ooyalaplayerP4.style.display = 'block';
+            else if (video == 'p5')
+                ooyalaplayerP5.style.display = 'block';
+            else if (video == 'p6')
+                ooyalaplayerP6.style.display = 'block';
+            else if (video == 'p7')
+                ooyalaplayerP7.style.display = 'block';
+            else if (video == 'p8')
+                ooyalaplayerP8.style.display = 'block';
+            else if (video == 'p9')
+                ooyalaplayerP9.style.display = 'block';
+            else if (video == 'p10')
+                ooyalaplayerP10.style.display = 'block';
+            else if (video == 'p11')
+                ooyalaplayerP11.style.display = 'block';
+            else if (video == 'p12')
+                ooyalaplayerP12.style.display = 'block';
+            else if (video == 'p13')
+                ooyalaplayerP13.style.display = 'block';
+            else if (video == 'p14')
+                ooyalaplayerP14.style.display = 'block';
+            else if (video == 'p15')
+                ooyalaplayerP15.style.display = 'block';
+            else if (video == 'p16')
+                ooyalaplayerP16.style.display = 'block';
+            else if (video == 'p17')
+                ooyalaplayerP17.style.display = 'block';
+            else if (video == 'p18')
+                ooyalaplayerP18.style.display = 'block';
+            else if (video == 'p19')
+                ooyalaplayerP19.style.display = 'block';
+            else if (video == 'p20')
+                ooyalaplayerP20.style.display = 'block';
+            
+            popupVideo.style.display = 'block';
+        }
+
+        function hideV() {
+            ooyalaplayerP1.style.display = 'none';
+            ooyalaplayerP2.style.display = 'none';
+            ooyalaplayerP3.style.display = 'none';
+            ooyalaplayerP4.style.display = 'none';
+            ooyalaplayerP5.style.display = 'none';
+            ooyalaplayerP6.style.display = 'none';
+            ooyalaplayerP7.style.display = 'none';
+            ooyalaplayerP8.style.display = 'none';
+            ooyalaplayerP9.style.display = 'none';
+            ooyalaplayerP10.style.display = 'none';
+            ooyalaplayerP11.style.display = 'none';
+            ooyalaplayerP12.style.display = 'none';
+            ooyalaplayerP13.style.display = 'none';
+            ooyalaplayerP14.style.display = 'none';
+            ooyalaplayerP15.style.display = 'none';
+            ooyalaplayerP16.style.display = 'none';
+            ooyalaplayerP17.style.display = 'none';
+            ooyalaplayerP18.style.display = 'none';
+            ooyalaplayerP19.style.display = 'none';
+            ooyalaplayerP20.style.display = 'none';
+
+            popupVideo.style.display = 'none';
+        }
+    </script>
+    <div style="padding:35px 40px 15px 40px; font-size:20px;">
+        All providers must complete every segment of initial training before launching your obesity medicine practice. If you need assistance, please call 914-332-4190
+    </div>
+    <div style="padding:15px 50px 15px 50px;">
+        <span style="font-size:25px; font-weight:bold; padding-right:30px;">
+            TRAINING MODULES
+        </span>
+        <select name="ctl00$BodyContent$ddlTrainingType" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$BodyContent$ddlTrainingType\&#39;,\&#39;\&#39;)&#39;, 0)" id="BodyContent_ddlTrainingType" style="height:30px;width:175px;">
+	<option selected="selected" value="0">Select a training type</option>
+	<option value="1">Provider</option>
+	<option value="2">Staff</option>
+
+</select>
+    </div>
+    <hr />
+    <div id="BodyContent_divProvider">
+        <!--Video 1-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image1" src="../Images/Pages/Training/training_video1.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Intro: Why We Do What We Do (5:04)
+                </span><br /><br />
+                <span>
+                    CMWL Medical Director, Dr. Matthew Pinto, begins training by providing background on obesity and the obesity medicine specialty to give medical providers a better understanding of why we do what we do.
+                </span><br /><br />
+
+                <a onclick="showV('p1')" href="javascript:void(0);">
+                    <img id="BodyContent_imgPlay01" src="../Images/Pages/Training/Play.jpg" />
+                </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP1" type="checkbox" name="ctl00$BodyContent$cbP1" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 2-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image4" src="../Images/Pages/Training/training_video2.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Obesity Medicine Case Studies
+                </span><br /><br />
+                <span>
+                    See the CMWL medical weight loss program in action. Learn how the proper implementation of the program improves health outcomes and changes patients lives.
+                </span><br /><br />
+
+                <a onclick="showV('p2')" href="javascript:void(0);">
+                    <img id="BodyContent_Image5" src="../Images/Pages/Training/Play.jpg" />
+                </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP2" type="checkbox" name="ctl00$BodyContent$cbP2" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 3-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image6" src="../Images/Pages/Training/training_video3.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Tools Needed For Obesity Medicine
+                </span><br /><br />
+                <span>
+                    Set yourself up for success by making sure these essential tools are implemented in your medical weight loss practice.  Gain insight into the CMWL clinical program and protocols, technology, workflows, and documentation.
+                </span>
+                <br /><br /><a href="/Images/CMWL_Initial_Consults.pdf" target="_blank">Tips for Successful New Patient Conversion</a><br /><br />
+
+                <a onclick="showV('p3')" href="javascript:void(0);">
+                <img id="BodyContent_Image7" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP3" type="checkbox" name="ctl00$BodyContent$cbP3" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 4-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image8" src="../Images/Pages/Training/training_video4.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Behavioral and Motivational Counseling
+                </span><br /><br />
+                <span>
+                    Intensive behavioral counseling is the key to long-term weight loss and the essence of what CMWL provides. Learn the basics of behavioral and motivational counseling in order to meet the needs of your weight loss patients.
+                </span><br /><br />
+
+                <a onclick="showV('p4')" href="javascript:void(0);">
+                <img id="BodyContent_Image9" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP4" type="checkbox" name="ctl00$BodyContent$cbP4" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 5-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image10" src="../Images/Pages/Training/training_video5.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Nutrition Program Options
+                </span><br /><br />
+                <span>
+                    Meal replacement therapy can serve as an incredibly useful tool for patients as they undergo intensive behavioral counseling for obesity. calorie diet, Learn how to prescribe CMWL meal replacements for optimal results. 
+                </span><br /><br />
+
+                <a onclick="showV('p5')" href="javascript:void(0);">
+                <img id="BodyContent_Image11" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP5" type="checkbox" name="ctl00$BodyContent$cbP5" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 6-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image12" src="../Images/Pages/Training/training_video6.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Obesity TX Screening and Treatment System
+                </span><br /><br />
+                <span>
+                    An in-depth review of the CMWL Obesity TX platform to help you improve clinical outcomes, optimize revenue and enhance practice management efficiencies.
+                </span><br /><br />
+
+                <a onclick="showV('p6')" href="javascript:void(0);">
+                <img id="BodyContent_Image13" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP6" type="checkbox" name="ctl00$BodyContent$cbP6" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 7-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image14" src="../Images/Pages/Training/training_video7.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Prescription Medications Associated With Weight Gain
+                </span><br /><br />
+                <span>
+                    Your patients may be fighting weight gain unnecessarily because of specific medications. Learn which ones may cause weight gain and identify alternatives that can support weight loss goals.
+                </span><br /><br />
+
+                <a onclick="showV('p7')" href="javascript:void(0);">
+                <img id="BodyContent_Image15" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP7" type="checkbox" name="ctl00$BodyContent$cbP7" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 8-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image16" src="../Images/Pages/Training/training_video8.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Anorectic Medication Prescribing Strategies
+                </span><br /><br />
+                <span>
+                    Pharmaceuticals can also play a helpful role in medical weight loss when prescribed correctly. Learn about the various FDA approved weight loss medications: indications, contraindications and adverse reactions.
+                </span><br /><br />
+
+                <a onclick="showV('p8')" href="javascript:void(0);">
+                <img id="BodyContent_Image17" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP8" type="checkbox" name="ctl00$BodyContent$cbP8" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 9-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image18" src="../Images/Pages/Training/training_video9.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Promoting Long-Term Weight Loss Through Medication Adjustment
+                </span><br /><br />
+                <span>
+                    Review how to adjust patients’ prescription medication as they lose weight. Other topics include creating patient case reports and a review of hormones affecting weight.
+                </span><br /><br />
+
+                <a onclick="showV('p9')" href="javascript:void(0);">
+                <img id="BodyContent_Image19" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP9" type="checkbox" name="ctl00$BodyContent$cbP9" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 10-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image20" src="../Images/Pages/Training/training_video10.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Pricing Strategies
+                </span><br /><br />
+                <span>
+                    This video reviews the best strategies for pricing your medical weight loss services and products, with or without insurance. It includes billing and coding information and recommended pricing for non-covered services and products.
+                </span><br /><br />
+
+                <a onclick="showV('p10')" href="javascript:void(0);">
+                <img id="BodyContent_Image21" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP10" type="checkbox" name="ctl00$BodyContent$cbP10" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 11-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image22" src="../Images/Pages/Training/training_video11.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    SMART Maintenance Training
+                </span><br /><br />
+                <span>
+                    Weight management does not end when patients achieve their goals, and neither does your care. Leverage the SMART Maintenance program to help patients keep the weight off while you generate additional incremental revenue. 
+                </span><br /><br />
+
+                <a onclick="showV('p11')" href="javascript:void(0);">
+                <img id="BodyContent_Image23" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP11" type="checkbox" name="ctl00$BodyContent$cbP11" />
+                    
+                </div>
+            </div>
+        </div>
+        <hr />
+        <!--Video 12-->
+        <div style="padding:15px 50px 15px 50px; height:250px">
+            <div style="float:left; width:251px;">
+                <img id="BodyContent_Image24" src="../Images/Pages/Training/training_video10.jpg" style="height:250px;width:250px;" />
+            </div>
+            <div style="float:left; width:400px; padding-left:25px;">
+                <br />
+                <span style="font-size:23px; font-weight:bold;">
+                    Pre-Launch Checklist
+                </span><br /><br />
+                <span>
+                    Are you ready to launch? Watch this video and review the Pre-Launch Checklist with your team to ensure a smooth, successful grand opening!
+                </span><br /><br />
+
+                <a onclick="showV('p12')" href="javascript:void(0);">
+                <img id="BodyContent_Image25" src="../Images/Pages/Training/Play.jpg" />
+                    </a>
+            </div>
+            <div style="float:right; text-align:center; width:200px;">
+                <br /><br />
+                <span style="font-weight:bold;">
+                    Check when<br />complete
+                </span>
+                <br /><br />
+                <div style="padding-left:88px;">
+                    <input id="BodyContent_cbP12" type="checkbox" name="ctl00$BodyContent$cbP12" />
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <div id="popupVideo" style="display:none; width: 70%; height: 100%; top: 0; position: fixed;">
+        <div style="background-color:#6C9C31; height:575px; width:800px; padding:5px 20px 5px 20px; position:relative; margin: 0 auto; top: 18%; z-index: 999;">
+            <div style="height:25px;">
+                <div class="HeaderCloseButton2" style="float: right;  vertical-align:middle;">
+                    <input id="btnPopupClose" style="background-image: none; background: #BED630; border-style: none;" type="button" value="X" onclick="hideV()"/>
+                </div>
+            </div>
+            <div id="popContents" style="background-color:white; height:478px; width:765px; padding:15px;">
+                <script src="//player.ooyala.com/static/v4/production/latest/core.min.js"></script> 
+                <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/main_html5.min.js"></script> 
+                <script src="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.js"></script> 
+                <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/bit_wrapper.min.js"></script> 
+
+                <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.css"/> 
+
+                <div id='ooyalaplayerP1' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP2' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP3' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP4' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP5' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP6' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP7' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP8' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP9' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP10' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP11' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP12' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP13' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP14' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP15' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP16' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP17' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP18' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP19' style='width:760px;height:475px; display:none;'></div>
+                <div id='ooyalaplayerP20' style='width:760px;height:475px; display:none;'></div>
+                <script>
+                    var playerParam = {
+                        'pcode': 'RvYmY6hur13N6wMKKnX_HgCa0VEU',
+                        'playerBrandingId': '14373d42af404d9fa5f4f7040996fb34',
+                        'autoplay': false,
+                        'loop': false
+                    };
+                    OO.ready(function () {
+                        window.pp = OO.Player.create('ooyalaplayerP1', '1oNmRnMDE6JKIkuF-9PHnQsGnOBKF0Qj', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP2', '5lN2RnMDE6q_QeJdsA8lN_xf7j8aySKU', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP3', 'pkdmVnMDE60TyNKu5Gvtm_vGfncY1yd9', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP4', '9sYWZnMDE6vu32xRo983aAj8gopZYBM9', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP5', 'duNGhnMDE6zUXHBqbp03P0xlcCyPkLji', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP6', 'drY3IzZTE6YBBBUChL49QjkmXPzIULZH', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP7', 'FpazloMDE6mJWJ8aOa0OzKhYuqbQ8eig', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP8', '5sdDloMDE6ZHa1ubXHccOEunFbjwZRv0', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP9', 'FqOTloMDE6kacNStdL7D4H13ifMkQ-bd', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP10', 'VxbDc0MjE68Bpyd_0e987Nail01PDz6K', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP11', '05eWZ2YTE62NkftzGlWwXqfE-rnG-BlF', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP12', 'x1cDNtNjE6kzcX7ulN2tVOdknJ7rEgWG', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP13', '1oNmRnMDE6JKIkuF-9PHnQsGnOBKF0Qj', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP14', 'hxdzQ2ZTE6Q_yqxhWvsxvc_qROJDDwc4', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP15', '9kdTZxZDE65Jcon-tQQR_quYHcyKmXKw', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP16', '9idTZxZDE6KLqyus660DPF9323J8kxw4', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP17', '85dTZxZDE6zYqVUnzSyqIXI2Ga6tXo9y', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP18', '83dTZxZDE6pRKB7rhHFx-8PHgMBxF737', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP19', 'FucXh1aTrvmoQmjzMfKVFkIbn8VMcTJp', playerParam);
+                        window.pp = OO.Player.create('ooyalaplayerP20', 'psdjdxZDE6ZknZtobJycNk9pvuKQCcvv', playerParam);
+                    });
+                </script>
+                <noscript><div>Please enable Javascript to watch this video</div></noscript>                                        
+            </div>
+            <div style="float:right; padding-bottom:15px">
+                <input id="popupCancel" type="button" class="btnStyle" value="Close" style="width:50px; height:25px;" onclick="hideV()"/>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$BodyContent$ScriptManager1', 'ctl01', [], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+
+            </section>
+        </div>
+    <footer style="padding-top:100px;">
+        <div class="content-wrapper" style="background-color:#737d81; height:40px; padding:0px;">
+            <div style="padding-left:40px;padding-top:12px;">
+            <span style="color:white; font-weight:bold; vertical-align:middle;">
+                <a href="https://www.centerformedicalweightloss.com/about-us" style="color:white; text-decoration:none; font-weight:bold;">ABOUT US</a>&nbsp;&nbsp;&bull;&nbsp;
+                <a href="https://physician.centerformedicalweightloss.com/index.php/contact-us/" style="color:white; text-decoration:none; font-weight:bold;">CONTACT US</a>&nbsp;&nbsp;&bull;&nbsp;
+                <a href="https://physician.centerformedicalweightloss.com/index.php/terms-and-conditions/" style="color:white; text-decoration:none; font-weight:bold;">TERMS & CONDITIONS</a>&nbsp;&nbsp;&bull;&nbsp;
+                <a href="https://physician.centerformedicalweightloss.com/index.php/privacy-policy/" style="color:white; text-decoration:none; font-weight:bold;">PRIVACY POLICY</a>
+            </span>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="float-right" style="padding-right:20px;">
+                <p>Copyright 2007-2018 &copy; The Center for Medical Weight Loss</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender1","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP1"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender3","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP2"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender4","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP3"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender5","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP4"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender6","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP5"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender7","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP6"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender8","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP7"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender9","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP8"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender10","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP9"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender11","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP10"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender12","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP11"));
+});
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ToggleButtonBehavior, {"checkedImageUrl":"../Images/Pages/Training/checked.png","id":"BodyContent_ToggleButtonExtender13","imageHeight":25,"imageWidth":25,"uncheckedImageUrl":"../Images/Pages/Training/unchecked.png"}, null, null, $get("BodyContent_cbP12"));
+});
+//]]>
+</script>
+</form>
+    </div>
+</body>
+</html>

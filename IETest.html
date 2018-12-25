@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script type="text/javascript" src="https://player.ooyala.com/static/v4/stable/4.28.22/core.min.js"></script>
+  <script type="text/javascript" src="https://player.ooyala.com/static/v4/stable/4.28.22/skin-plugin/html5-skin.min.js"></script>
+  <script type="text/javascript" src="https:/player.ooyala.com/static/v4/stable/4.28.22/video-plugin/bit_wrapper.min.js"></script>
+  <script type="text/javascript" src="https://player.ooyala.com/static/v4/stable/4.28.22/video-plugin/main_html5.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://player.ooyala.com/static/v4/stable/4.28.22/skin-plugin/html5-skin.min.css">
+  <title>iframe Test</title>
+</head>
+<body>
+	<div class="container">
+        <div id="container" style="width:640px; height:360px;"></div>
+        <script>
+            var playerParam = {
+              "pcode": "ExNG0yOnRifgmMP7XkFSmqPU8KiH",
+              "playerBrandingId": "a5a950cbb70d4c208f14b342639ea1d9",
+              "autoplay": true,
+              "skin": {
+                  "config": "/skin.json",
+                  /*"inline": {
+                      // Put your player customizations here
+                      // to override settings in skin.json. 
+                      // The JSON object must match the structure of skin.json.
+                      //"startScreen": {"showDescription": false, "playIconStyle": {"color": "blue"}}
+                  }*/
+              }
+            };
+            OO.ready(function() {
+              window.pp = OO.Player.create("container", "9pbmpoZjE6Nm8nMcDP4eCeeiA-BdUedH", playerParam);
+            });
+        </script>
+	</div>
+</body>
+</html>

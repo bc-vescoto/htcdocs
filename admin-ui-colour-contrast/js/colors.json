@@ -1,0 +1,27 @@
+{
+"backgrounds":
+  {
+  "$bodyBgColor": "#ffffff",
+  "$panelBgColor": "#ffffff",
+  "$panel1BgColor": "#f2f2f3",
+  "$dialogBgColor": "#fcfcfd",
+  "$popupBgColor": "#ffffff",
+  "$collectionCellBandedBgColor" : "#fafafa",
+  "$collectionCellBgColor": "#ffffff",
+  "$collectionCellBgColorFocus": "#e1eff8",
+  "$collectionCellBgColorSelected": "#e8f3fa"
+},
+"TextColor":
+{
+  "$primaryTextColor": "#000000",
+  "$secondaryTextColor": "#000000",
+  "$headerTextColor": "#000000",
+  "$linkTextColor": "#02629f",
+  "$textColorError": "#BA0006",
+  "$buttonHalfChromeTextColor": "#000000",
+  "$buttonOutlinedChromeTextColor": "#000000",
+  "$formControlLabelColor": "#000000",
+  "$radioCheckboxLabelColor": "#000000"
+
+}
+}
