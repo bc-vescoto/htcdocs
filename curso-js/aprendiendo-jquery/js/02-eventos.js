@@ -51,7 +51,19 @@ $(document).ready(function(){
 
   // Mousedown y mouseup
   datos.mousedown(function(){
-    $
+    $(this).css("border-color", "gray");
+  });
+
+  datos.mouseup(function(){
+    $(this).css("border-color", "black");
+  });
+
+  // Mousemove
+  $(document).mousemove(function(){
+    var sigueme = $("#sigueme")
+    $('body').css("cursor","none");
+    sigueme.css("left", event.clientX)
+           .css("top", event.clientY);
   });
 
 

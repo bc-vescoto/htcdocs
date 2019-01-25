@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="//player.ooyala.com/static/v4/stable/4.28.22/core.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/stable/4.28.22/video-plugin/main_html5.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/stable/4.28.22/video-plugin/osmf_flash.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/stable/4.28.22/video-plugin/bit_wrapper.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/stable/4.28.22/skin-plugin/html5-skin.min.js"></script>
+  <link rel="stylesheet" href="//player.ooyala.com/static/v4/stable/4.28.22/skin-plugin/html5-skin.min.css"/>
+</head>
+<body>
+  <div id='container' style="width:640px; height:360px;"></div>
+<script>
+
+  function onCreate(player) {
+        player.mb.subscribe(OO.EVENTS.INITIAL_PLAY_STARTING, 'example', function() {
+          var bmPlayer = (window.bitmovinPlayer('*') || [])[0];
+          if (bmPlayer && bmPlayer.vr) {
+            bmPlayer.vr.setViewingDirection({ pitch: 0, roll: 0, yaw: 180 }); // Change yaw value as needed
+          }
+        });
+      }
+
+  var playerParam = {
+    "pcode": "Zkbmo6GF2LxceMLgevLrcbpYicLF",
+    "playerBrandingId": "YTMwZmZmOGY2YWU1NGM1NTM1MmQxNjM3",
+    'debug':true,
+    "skin": {
+      "config": "SephoraJSON.json"
+    },
+    onCreate : window.onCreate
+  };
+
+  OO.ready(function() {
+    window.pp = OO.Player.create('container', 'I2ZXBqZzE6SX69CRRgbXLaZ-aNfwCcHY', playerParam,
+    );
+  });
+</script>
+</body>
+</html>

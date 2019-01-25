@@ -2,17 +2,17 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <script src="//player.ooyala.com/static/v4/production/latest/core.min.js"></script>
-  <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/main_html5.min.js"></script>
-  <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/osmf_flash.min.js"></script>
-  <script src="//player.ooyala.com/static/v4/production/latest/video-plugin/bit_wrapper.min.js"></script>
-  <script src="//player.ooyala.com/static/v4/production/latest/other-plugin/discovery_api.min.js"></script>
-  <script src="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.js"></script>
-  <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.css"/>
+  <script src="//player.ooyala.com/static/v4/production/core.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/production/video-plugin/main_html5.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/production/video-plugin/osmf_flash.min.js"></script>
+  <!-- <script src="//player.ooyala.com/static/v4/production/video-plugin/bit_wrapper.min.js"></script>-->
+  <script src="//player.ooyala.com/static/v4/production/other-plugin/discovery_api.min.js"></script>
+  <script src="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.js"></script>
+  <link rel="stylesheet" href="//player.ooyala.com/static/v4/production/skin-plugin/html5-skin.min.css"/>
 </head>
 
 <body>
-<div id='container'></div>
+<div id='container' style ="width:640px" "heigth:320px"></div>
 <script>
 
   function onCreate(player) {
@@ -25,9 +25,11 @@
       }
 
   var playerParam = {
-    "pcode": "5zb2wxOlZcNCe_HVT3a6cawW298X",
-    "playerBrandingId": "26e2e3c1049c4e70ae08a242638b5c40",
+    "pcode": "Zkbmo6GF2LxceMLgevLrcbpYicLF",
+    "playerBrandingId": "YTMwZmZmOGY2YWU1NGM1NTM1MmQxNjM3",
     'debug':true,
+    'autoplay': true,
+    "iosPlayMode":"inline",
     "skin": {
       "config": "",
       "inline": {"shareScreen": {"embed": {"source": "<iframe width='640' height='480' frameborder='0' allowfullscreen src='//player.ooyala.com/static/v4/production/latest/skin-plugin/iframe.html?ec=<ASSET_ID>&pbid=<PLAYER_ID>&pcode=<PUBLISHER_ID>'></iframe>"}}}
@@ -36,7 +38,7 @@
   };
 
   OO.ready(function() {
-    window.pp = OO.Player.create('container', 'k2dmljZjE6sDQoLVLqb0uhgtef5OEzGo', playerParam,
+    window.pp = OO.Player.create('container', 'I2ZXBqZzE6SX69CRRgbXLaZ-aNfwCcHY', playerParam,
     );
   });
 </script>

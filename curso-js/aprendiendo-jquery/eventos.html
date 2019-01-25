@@ -18,7 +18,7 @@
     }
 
     input{
-      padding: 10px;
+      padding: 20px;
       width: 300px;
       font-size: 20px;
     }
@@ -32,6 +32,17 @@
       display: none;
     }
 
+    #sigueme{
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      display: block;
+      background: red;
+      opacity: 0.5;
+      border-radius: 999px;
+      border-radius: 3px solid black;
+    }
+
     /*
     #caja:hover{
       background: red;
@@ -42,9 +53,11 @@
   </head>
   <body>
     <h1>Aprendiendo JQuery - Eventos</h1>
+    <div id="sigueme"></div>
     <form>
       <input type="text" id="nombre" />
     </form>
+    <br>
     <div id="datos"></div>
     <br>
     <div id="caja">

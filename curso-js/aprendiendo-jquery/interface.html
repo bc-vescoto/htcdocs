@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Aprendiendo Jquery</title>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css" />
+  <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.structure.min.css" />
+  <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.theme.min.css" />
+  <script type="text/javascript" src="js/06-interface.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+  <style>
+    .elemento{
+      width: 300px;
+      height: 200px;
+      border: 4px solid black;
+      background: lightblue;
+      margin: 20px;
+      float: left;
+    }
+
+    .lista-seleccionable li{
+      width: 80%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      list-style: none;
+      cursor: pointer;
+    }
+
+    ul .ui-selecting {background: green;}
+    ul .ui-selected{background: blue;}
+
+    #elemento-movido{
+      width: 100px;
+      height: 100px;
+      border: 4px solid red;
+    }
+
+    #area{
+      width: 300px;
+      height: 300px;
+      border: 4px solid green;
+    }
+
+    .caja-efectos{
+      background: pink;
+      float: none;
+      display: none;
+    }
+  </style>
+  </head>
+  <body>
+    <h1>Aprendiendo JQuery - JQuery UI</h1>
+    <hr/>
+    <h3>Tooltip</h3>
+    <a href="#" title="Acceder a la seccion de mis datos de esta web">Mis datos</a>
+    <a href="#" title="Quien eres">Identificarse</a>
+    <a href="#" title="Ver todos mis amigos">Amigos</a>
+    <hr/>
+    <hr/>
+    <h3>Cuadros de  dialogo</h3>
+    <button id="lanzar-popup">Lanzame</button>
+    <div id="popup" title="Estas seguro?">
+      <p>
+        Si continuas en el curso aprenderas mucho de javascript inevitablemente
+      </p>
+    </div>
+    <hr/>
+    <hr/>
+    <h3>Calendario</h3>
+    <input type="text" id="calendario">
+    <hr/>
+    <hr/>
+    <h3>Pestanas</h3>
+    <div id="pestanas">
+      <ul>
+        <li><a href="#tabs-1">Pestana 1</a></li>
+        <li><a href="#tabs-2">Pestana 2</a></li>
+        <li><a href="#tabs-3">Pestana 3</a></li>
+      </ul>
+      <div id="tabs-1">
+        Hola soy la primera pestana
+      </div>
+      <div id="tabs-2">
+        Hola soy la segunda pestana
+      </div>
+      <div id="tabs-3">
+        Hola soy la tercera pestana
+      </div>
+    </div>
+    <hr/>
+    <button id="mostrar">Mostrar</button>
+    <div class="caja-efectos elemento"></div>
+    <div id="elemento-movido"></div>
+    <br>
+    <div id="area" ></div>
+    <ul class="lista-seleccionable">
+      <li>GTA V</li>
+      <li>NFS</li>
+      <li>Crash</li>
+      <li>Super Mario</li>
+      <li>Fifa</li>
+    </ul>
+
+    <div class="elemento">
+      Hola, soy un elemento de la web
+    </div>
+    <div class="elemento">
+      Hola, soy un elemento de la web
+    </div>
+    <div class="elemento">
+      Hola, soy un elemento de la web
+    </div>
+  </body>
+</html>
