@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://player.ooyala.com/static/v4/production/latest/core.min.js"></script>
+  <script src="https://player.ooyala.com/static/v4/production/latest/video-plugin/main_html5.min.js"></script>
+  <script src="https://player.ooyala.com/static/v4/production/latest/video-plugin/bit_wrapper.min.js"></script>
+  <script src="https://player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <title>JS Bin</title>
+   <link rel="stylesheet" href="https://player.ooyala.com/static/v4/production/latest/skin-plugin/html5-skin.min.css" />
+</head>
+<body>
+  <div id='container' ></div>
+        <script>
+
+                var thumbnail;
+                var thumbnailUrl;
+
+                function onCreate(player) {
+                  
+                 player.mb.subscribe( "*", 'example', function(eventName) { 
+                     //console.log(eventName);
+                     if (eventName === OO.EVENTS.PLAYED) {
+                     var ooEndScreen = $(".oo-end-screen");
+                     ooEndScreen.css("background-image", thumbnail);
+                     ooEndScreen.css("background-size", "cover");
+                     ooEndScreen.css("background-repeat", "no-repeat");
+                     ooEndScreen.css("background-position", "center");
+                     ooEndScreen.css("display", "inline-block");
+                     ooEndScreen.css("vertical-align", "middle");
+
+                     };
+                     if (eventName == OO.EVENTS.THUMBNAILS_FETCHED) {
+                      console.log(eventName);
+                      thumbnail = $(".oo-state-screen-poster")[0].style.backgroundImage;
+                     };
+                     
+                });
+
+                };
+
+                
+                OO.ready(function() {
+                    console.log("OO is ready, invoking");
+                    
+                    window.pp = OO.Player.create('container', '9pbmpoZjE6Nm8nMcDP4eCeeiA-BdUedH', {'pcode': 'ExNG0yOnRifgmMP7XkFSmqPU8KiH',
+                    'playerBrandingId': 'a5a950cbb70d4c208f14b342639ea1d9',
+                    'autoplay': false,
+                    onCreate : window.onCreate
+                  });
+                    
+                });
+                
+                
+        </script>
+</body>
+</html>
